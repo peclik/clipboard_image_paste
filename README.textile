@@ -6,6 +6,7 @@ Paste (cropped) image from clipboard as an attachment.
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
 * works *only in Google Chrome and Mozilla Firefox browsers*
+* translations: bulgarian, czech, english
 
 --------------------------------------------------------------------------------
 
