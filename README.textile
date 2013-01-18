@@ -25,16 +25,18 @@ h2. Authors:
 * used uploaded image data to file object conversion
   code snippet by Alexandr Ivanov
 * used jQuery, jQuery UI and Jcrop javascript libraries
+* Ivan Cenov (Bulgarian translation)
 
 
 --------------------------------------------------------------------------------
 
 h2. Known issues:
 
-* maximum attachment size is checked against BASE64 encoded image data
-* clipboard_image_paste combines number of both regular files and pasted images
-  for maximum number of attachment checks, while Redmine ignores
-  the number pasted images
+* maximum attachment size is checked against BASE64 encoded image data (even 
+  smaller images than the maximum allowed attachment size can be rejected)
+* clipboard_image_paste's 'Add picture from clipboard' command combines number
+  of both regular files and pasted images for maximum number of attachment check, 
+  while Redmine's original 'Add another file' counts only regular files
 
 --------------------------------------------------------------------------------
 
