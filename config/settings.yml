@@ -1,0 +1,18 @@
+# clipboard_image_paste static configuration
+#
+
+# minimum Mozilla Firefox version
+max_attachments : 10
+
+# minimum Google Chrome version
+# 13..? = 535.x  - OK
+# 12    = 534.30 - OK
+# 10    = 534.16 - BAD
+min_chrome_ver  : 535
+
+# minimum Google Chrome version - human friendly
+min_chrome_ver_hf : 13
+
+# minimum Mozilla Firefox version
+min_firefox_ver : 5
+

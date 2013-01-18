@@ -1,0 +1,39 @@
+h1. clipboard_image_paste
+
+Paste cropped image from clipboard as an attachment.
+
+--------------------------------------------------------------------------------
+
+h2. Compatibility:
+
+* Redmine 2.2.1
+* *works only in Google Chrome and Mozilla Firefox browsers*
+* tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
+
+--------------------------------------------------------------------------------
+
+h2. Authors:
+
+* Richard Pecl (Redmine plugin functionality) [https://github.com/peclik]
+* used clipboard handler snippet by Joel Besada
+* used uploaded image data to file object conversion
+  code snippet by Alexandr Ivanov
+* used jQuery, jQuery UI and Jcrop javascript libraries
+
+
+--------------------------------------------------------------------------------
+
+h2. Known issues:
+
+* maximum attachment size is checked against BASE64 encoded image data
+* clipboard_image_paste combines number of both regular files and pasted images
+  for maximum number of attachment checks, while Redmine ignores
+  the number pasted images
+
+--------------------------------------------------------------------------------
+
+h2. Changelog:
+
+<pre>
+18.01.2013 RELEASED 1.0
+</pre>

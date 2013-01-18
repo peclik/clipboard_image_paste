@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 image crop tool | Script Tutorials</title>
+    <link href="css/jquery-ui-1.9.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/stylesheets/jquery.Jcrop-0.9.10.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/stylesheets/clipboard_image_paste.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui-1.9.2.min.js"></script>
+    <script src="../assets/javascripts/jcrop-0.9.10.min.js"></script>
+    <script src="../assets/javascripts/clipboard_image_paste.js"></script>
+  </head>
+
+  <body onload="cbImagePaste.showPasteDialog();">
+    <header>
+        <h2>HTML5 image crop tool</h2>
+    </header>
+
+<fieldset>
+  <span id="attachments_fields"></span>
+  <span class="add_attachment">Add file</span>
+</fieldset>
+
+<span id="cbp_images_form">
+  <span id="cbp_image_fields"></span>
+  <span class="add_attachment"><a href=";" onclick="cbImagePaste.showPasteDialog(); return false;">Add picture</a>
+  </span>
+</span>
+
+<!-- input field span inspired by redmine/app/views/attachments/_form.html.erb -->
+<span id="cbp_image_field" style="display:none">
+  <span id="cbp_attach_thumbnail_box">
+    <img id="cbp_attach_thumbnail" title="attachment 1 preview"/>
+  </span>
+  <input type="hidden" name="attachments[nnnnn][data]" id="cbp_imageData"/>
+  <input type="text"   name="attachments[nnnnn][name]" class="name" maxlength=50 />.png
+  <input type="text"   name="attachments[nnnnn][description]" class="description" maxlength=255/>
+</span>
+
+    <!-- clipboard paste dialog -->
+    <div id="cbp_pasteDialog" title="Clipboard image paste" style="display:none">
+      <script type="text/javascript">
+        // translated labels go here (inside namespace)
+        (function(cbImagePaste, $, undefined) {
+          cbImagePaste.cbp_txt_crop_box       = "crop box";
+          cbImagePaste.cbp_txt_print          = "Use PrintScreen key and then Ctrl+V.";
+          cbImagePaste.cbp_txt_select         = "Use mouse to select specific part of the image.";
+          cbImagePaste.cbp_txt_deselect       = "Click outside selection to deselect.";
+          cbImagePaste.cbp_txt_empty_cb       = "The clipboard is empty.";
+          cbImagePaste.cbp_txt_no_image_cb    = "No image found in the clipboard.";
+          cbImagePaste.cbp_txt_no_image_pst   = "No image has been pasted.";
+          cbImagePaste.cbp_txt_too_many_files = "Number of attachments files is limited.";
+          cbImagePaste.cbp_txt_wrong_browser  = "Your current browser cannot paste pictures. Please use Mozilla Firefox or Google Chrome.";
+          cbImagePaste.cbp_txt_btn_ok         = "Ok";
+          cbImagePaste.cbp_txt_btn_cancel     = "Cancel";
+          cbImagePaste.cbp_txt_too_big_image  = "Image is too big for upload.";
+          cbImagePaste.cbp_max_attach_size    = 1000000;
+          cbImagePaste.cbp_max_attachments    = 10;
+          cbImagePaste.cbp_min_chrome_ver     = 535;
+          cbImagePaste.cbp_min_firefox_ver    = 3;
+          cbImagePaste.cbp_act_update_id      = "0";
+        }(window.cbImagePaste = window.cbImagePaste || {}, jQuery));
+      </script>
+
+      <div id="cbp_headerBox">
+        <!-- canvas id="cbp_thumbnail" width="60" height="60"></canvas -->
+        <div id="cbp_instructions">&nbsp;</div>
+      </div>
+      <div id="cbp_panelBox">
+        <!-- place for pasted image editor -->
+      </div>
+    </div>
+
+  </body>
+</html>

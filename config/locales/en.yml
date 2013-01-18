@@ -1,0 +1,14 @@
+# English strings go here
+en:
+  cbp_txt_add_image      : Add picture from clipboard
+  cbp_txt_crop_box       : crop box
+  cbp_txt_print          : Use PrintScreen key and then Ctrl+V.
+  cbp_txt_select         : Use mouse to select specific part of the image.
+  cbp_txt_deselect       : Click outside selection to deselect.
+  cbp_txt_empty_cb       : The clipboard is empty. Try PrintScreen key again.
+  cbp_txt_no_image_cb    : No image found in the clipboard. Try PrintScreen key again.
+  cbp_txt_no_image_pst   : No image has been pasted yet. Insert some first.
+  cbp_txt_too_many_files : Cannot add another attachment. Number of file attachments allowed for one update is limited to %{max_attachments}.
+  cbp_txt_wrong_browser  : Your current browser cannot paste pictures. Please use Mozilla Firefox ver. >= %{min_firefox_ver} or Google Chrome ver. >= %{min_chrome_ver}.
+  cbp_txt_btn_ok         : Ok
+  cbp_txt_btn_cancel     : Cancel
