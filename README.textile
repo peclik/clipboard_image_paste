@@ -1,6 +1,11 @@
 h1. clipboard_image_paste
 
-Paste cropped image from clipboard as an attachment.
+Paste (cropped) image from clipboard as an attachment.
+
+* uses *pure client side JavaScript*
+* attachment *works for issues, wiki, news, files, documents, forums*
+* image can be interactively *cropped*
+* works *only in Google Chrome and Mozilla Firefox browsers*
 
 --------------------------------------------------------------------------------
 
