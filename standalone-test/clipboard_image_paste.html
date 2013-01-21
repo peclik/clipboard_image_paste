@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML5 image crop tool | Script Tutorials</title>
-    <link href="css/jquery-ui-1.9.2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/stylesheets/jquery-ui-1.9.2.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/stylesheets/jquery.Jcrop-0.9.10.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/stylesheets/clipboard_image_paste.css" rel="stylesheet" type="text/css" />
 
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/jquery-ui-1.9.2.min.js"></script>
+    <script src="../assets/javascripts/jquery-1.7.2.min.js"></script>
+    <script src="../assets/javascripts/jquery-ui-1.9.2.min.js"></script>
     <script src="../assets/javascripts/jcrop-0.9.10.min.js"></script>
     <script src="../assets/javascripts/clipboard_image_paste.js"></script>
+
+    <script type="text/javascript">
+      var j$cbp = $;
+    </script>
+
   </head>
 
   <body onload="cbImagePaste.showPasteDialog();">
@@ -61,7 +66,7 @@
           cbImagePaste.cbp_min_chrome_ver     = 535;
           cbImagePaste.cbp_min_firefox_ver    = 3;
           cbImagePaste.cbp_act_update_id      = "0";
-        }(window.cbImagePaste = window.cbImagePaste || {}, jQuery));
+        }(window.cbImagePaste = window.cbImagePaste || {}, j$cbp));
       </script>
 
       <div id="cbp_headerBox">
