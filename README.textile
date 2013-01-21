@@ -44,6 +44,7 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+21.01.2013 RELEASED 1.1
 [!] Supports Redmine version >=1.4.0
 [+] Russian translation
 
