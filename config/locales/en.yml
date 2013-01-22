@@ -12,3 +12,4 @@ en:
   cbp_txt_wrong_browser  : Your current browser cannot paste pictures. Please use Mozilla Firefox ver. >= %{min_firefox_ver} or Google Chrome ver. >= %{min_chrome_ver}.
   cbp_txt_btn_ok         : Ok
   cbp_txt_btn_cancel     : Cancel
+  cbp_txt_copy_link      : Copy image and thumbnail link

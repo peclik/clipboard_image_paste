@@ -20,23 +20,23 @@ h2. Compatibility:
 
 h2. Authors:
 
-* Richard Pecl (Redmine plugin functionality) [https://github.com/peclik]
+* Richard Pecl [https://github.com/peclik]
 * used clipboard handler snippet by Joel Besada
 * used uploaded image data to file object conversion
   code snippet by Alexandr Ivanov
 * used jQuery, jQuery UI and Jcrop javascript libraries
-* Ivan Cenov (Bulgarian translation)
-* AlexStein (Russian translation)
+* Ivan Cenov (Bulgarian translation) [https://github.com/jwalkerbg]
+* AlexStein (Russian translation) [https://github.com/AlexStein]
 
 
 --------------------------------------------------------------------------------
 
 h2. Known issues:
 
-* maximum attachment size is checked against BASE64 encoded image data (even 
+* maximum attachment size is checked against BASE64 encoded image data (even
   smaller images than the maximum allowed attachment size can be rejected)
 * clipboard_image_paste's 'Add picture from clipboard' command combines number
-  of both regular files and pasted images for maximum number of attachment check, 
+  of both regular files and pasted images for maximum number of attachment check,
   while Redmine's original 'Add another file' counts only regular files
 
 --------------------------------------------------------------------------------
@@ -44,9 +44,18 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+22.01.2013 RELEASED 1.2
+[+] Added dialog to copy image link for wiki
+
 21.01.2013 RELEASED 1.1
 [!] Supports Redmine version >=1.4.0
-[+] Russian translation
+[+] Added Russian translation
 
 18.01.2013 RELEASED 1.0
+--------------------------------------------------------------------------------
+Legend:
+[+] Added feature
+[*] Improved/changed feature
+[-] Bug fixed (we hope)
+[!] Important info
 </pre>

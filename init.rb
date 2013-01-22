@@ -15,7 +15,7 @@ Redmine::Plugin.register :clipboard_image_paste do
   name 'Clipboard image paste'
   author 'Richard Pecl'
   description "Paste cropped image from clipboard as attachment"
-  version '1.1'
+  version '1.2'
   requires_redmine :version_or_higher => '1.4.0'
 
   configfile = File.join(File.dirname(__FILE__), 'config', 'settings.yml')

@@ -1,7 +1,7 @@
 
 <span id="cbp_images_form">
   <span id="cbp_image_fields"></span>
-  <span class="add_attachment"><%= link_to l(:cbp_txt_add_image), '#', :onclick => 'cbImagePaste.showPasteDialog(); return false;', :class => 'add_attachment' %>
+  <span class="add_attachment"><%= link_to_function(l(:cbp_txt_add_image), 'cbImagePaste.showPasteDialog(); return false;', :class => 'add_attachment') %>
   (<%= l(:label_max_size) %>: <%= number_to_human_size(Setting.attachment_max_size.to_i.kilobytes) %>)</span>
 </span>
 
@@ -10,14 +10,15 @@
   <span id="cbp_attach_thumbnail_box">
     <img id="cbp_attach_thumbnail" title="attachment 1 preview"/>
   </span>
-  <%= hidden_field_tag 'attachments[nnnnn][data]', '', :id => "cbp_imageData" %>
-  <%= text_field_tag 'attachments[nnnnn][name]', '', :id => nil, :class => 'name', :maxlength => 50 %>.png
+  <%= hidden_field_tag 'attachments[nnnnn][data]', '', :id => 'cbp_image_data' %>
+  <%= text_field_tag 'attachments[nnnnn][name]', '', :id => nil, :class => 'name', :maxlength => 50 %>
+  <%= link_to(image_tag('link.png'), '#', :title => (l(:cbp_txt_copy_link)), :id => 'cbp_link_btn') %>
   <%= text_field_tag 'attachments[nnnnn][description]', '', :id => nil, :class => 'description', :maxlength => 255, :placeholder => l(:label_optional_description) %>
   <%= link_to_function(image_tag('delete.png'), 'cbImagePaste.removeImageField(this)', :title => (l(:button_delete))) %>
 </span>
 
 <!-- clipboard paste dialog -->
-<div id="cbp_pasteDialog" title="<%= l(:cbp_txt_add_image) %>" style="display:none">
+<div id="cbp_paste_dlg" title="<%= l(:cbp_txt_add_image) %>" style="display:none">
   <script type="text/javascript">
     // translated labels go here (inside namespace)
     (function(cbImagePaste, $, undefined) {
@@ -28,8 +29,8 @@
       cbImagePaste.cbp_txt_empty_cb        = "<%= escape_javascript(l(:cbp_txt_empty_cb         )).html_safe %>";
       cbImagePaste.cbp_txt_no_image_cb     = "<%= escape_javascript(l(:cbp_txt_no_image_cb      )).html_safe %>";
       cbImagePaste.cbp_txt_no_image_pst    = "<%= escape_javascript(l(:cbp_txt_no_image_pst     )).html_safe %>";
-      cbImagePaste.cbp_txt_too_many_files  = "<%= escape_javascript(l(:cbp_txt_too_many_files, :max_attachments => $clipboard_image_paste_config['max_attachments']   )).html_safe %>";
-      cbImagePaste.cbp_txt_wrong_browser   = "<%= escape_javascript(l(:cbp_txt_wrong_browser, :min_firefox_ver => $clipboard_image_paste_config['min_firefox_ver'], :min_chrome_ver => $clipboard_image_paste_config['min_chrome_ver_hf'])).html_safe %>";
+      cbImagePaste.cbp_txt_too_many_files  = "<%= escape_javascript(l(:cbp_txt_too_many_files,  :max_attachments => $clipboard_image_paste_config['max_attachments']   )).html_safe %>";
+      cbImagePaste.cbp_txt_wrong_browser   = "<%= escape_javascript(l(:cbp_txt_wrong_browser,   :min_firefox_ver => $clipboard_image_paste_config['min_firefox_ver'], :min_chrome_ver => $clipboard_image_paste_config['min_chrome_ver_hf'])).html_safe %>";
       cbImagePaste.cbp_txt_btn_ok          = "<%= escape_javascript(l(:cbp_txt_btn_ok           )).html_safe %>";
       cbImagePaste.cbp_txt_btn_cancel      = "<%= escape_javascript(l(:cbp_txt_btn_cancel       )).html_safe %>";
       cbImagePaste.cbp_txt_too_big_image   = "<%= escape_javascript(l(:error_attachment_too_big, :max_size => number_to_human_size(Setting.attachment_max_size.to_i.kilobytes))).html_safe %>";
@@ -41,11 +42,24 @@
     }(window.cbImagePaste = window.cbImagePaste || {}, j$cbp));
   </script>
 
-  <div id="cbp_headerBox">
+  <div id="cbp_header_box">
     <!-- canvas id="cbp_thumbnail" width="60" height="60"></canvas -->
     <div id="cbp_instructions">&nbsp;</div>
   </div>
-  <div id="cbp_panelBox">
+  <div id="cbp_panel_box">
     <!-- place for pasted image editor -->
   </div>
+</div>
+
+<!-- dialog to copy image link for wiki -->
+<div id="cbp_link_dlg" title="<%= l(:cbp_txt_copy_link) %>" style="display:none">
+  <input type="text" id="cbp_image_link" readonly />
+  <%
+    if $clipboard_image_paste_has_jquery
+  %>
+  <p/>
+  <input type="text" id="cbp_thumbnail_link" readonly />
+  <%
+    end
+  %>
 </div>

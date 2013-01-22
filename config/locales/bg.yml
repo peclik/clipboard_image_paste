@@ -7,8 +7,9 @@ bg:
   cbp_txt_deselect       : Кликнете извън избраната област, за да отмените избора.
   cbp_txt_empty_cb       : Клипбордът е празен. Опитайте с клавиш PrintScreen отново.
   cbp_txt_no_image_cb    : Не е намерено изображение в клипборда. Опитайте с клавиш PrintScreen отново.
-  cbp_txt_no_image_pst   : Все още не е копирано изображение. Вмъкнете поне едно. 
+  cbp_txt_no_image_pst   : Все още не е копирано изображение. Вмъкнете поне едно.
   cbp_txt_too_many_files : Не може да се добави нов файл. Позволеният брой на прикачените файлове за едно обновяване е ограничен до %{max_attachments}.
   cbp_txt_wrong_browser  : Вашият браузър не може да да копира изображения. Моля ползвайте Mozilla Firefox версия >= %{min_firefox_ver} или Google Chrome версия >= %{min_chrome_ver}.
   cbp_txt_btn_ok         : ОК
   cbp_txt_btn_cancel     : Отказ
+  cbp_txt_copy_link      : Copy image and thumbnail link

@@ -30,7 +30,7 @@
 
 <span id="cbp_images_form">
   <span id="cbp_image_fields"></span>
-  <span class="add_attachment"><a href=";" onclick="cbImagePaste.showPasteDialog(); return false;">Add picture</a>
+  <span class="add_attachment"><a href="#" onclick="cbImagePaste.showPasteDialog(); return false;">Add picture</a>
   </span>
 </span>
 
@@ -39,13 +39,14 @@
   <span id="cbp_attach_thumbnail_box">
     <img id="cbp_attach_thumbnail" title="attachment 1 preview"/>
   </span>
-  <input type="hidden" name="attachments[nnnnn][data]" id="cbp_imageData"/>
-  <input type="text"   name="attachments[nnnnn][name]" class="name" maxlength=50 />.png
+  <input type="hidden" name="attachments[nnnnn][data]" id="cbp_image_data"/>
+  <input type="text"   name="attachments[nnnnn][name]" class="name" maxlength=50 />
+  <a id="cbp_link_btn" href="#" title="Copy image and thumbnail link">link</a>
   <input type="text"   name="attachments[nnnnn][description]" class="description" maxlength=255/>
 </span>
 
     <!-- clipboard paste dialog -->
-    <div id="cbp_pasteDialog" title="Clipboard image paste" style="display:none">
+    <div id="cbp_paste_dlg" title="Clipboard image paste" style="display:none">
       <script type="text/javascript">
         // translated labels go here (inside namespace)
         (function(cbImagePaste, $, undefined) {
@@ -69,13 +70,20 @@
         }(window.cbImagePaste = window.cbImagePaste || {}, j$cbp));
       </script>
 
-      <div id="cbp_headerBox">
+      <div id="cbp_header_box">
         <!-- canvas id="cbp_thumbnail" width="60" height="60"></canvas -->
         <div id="cbp_instructions">&nbsp;</div>
       </div>
-      <div id="cbp_panelBox">
+      <div id="cbp_panel_box">
         <!-- place for pasted image editor -->
       </div>
+    </div>
+
+    <!-- dialog to copy image link for wiki -->
+    <div id="cbp_link_dlg" title="Copy image and thumbnail link" style="display:none">
+      <input type="text" id="cbp_image_link" readonly />
+      <p/>
+      <input type="text" id="cbp_thumbnail_link" readonly />
     </div>
 
   </body>

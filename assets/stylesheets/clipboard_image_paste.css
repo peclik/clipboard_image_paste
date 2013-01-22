@@ -8,9 +8,6 @@
 // - GNU GENERAL PUBLIC LICENSE Version 2
 *******************************************************************************/
 
-#cbp_pasteDialog {
-}
-
 .cbp_drop_shadow {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -24,13 +21,13 @@
   height: 2.6em;
 }
 
-#cbp_panelBox {
+#cbp_panel_box {
   margin-top: 0.5em;
   border: 5px solid #aaa;
   background: #ddd;
 }
 
-#cbp_pasteCatcher {
+#cbp_paste_catcher {
   width: 0px;
   height: 0px;
   font-size: 0px;
@@ -72,4 +69,13 @@
 #cbp_image_fields input.description {
   margin-left: 8px;
   width: 340px;
+}
+
+#cbp_link_dlg input {
+  border: 1px solid lightgrey;
+  min-width: 40ex;
+}
+
+.cbp_dlg_small {
+  font-size: 10pt;
 }

@@ -12,3 +12,4 @@ cs:
   cbp_txt_wrong_browser  : Váš současný prohlížeč nepodporuje vkládání obrázků. Použijte, prosím, prohlížeč Mozilla Firefox ver. >= %{min_firefox_ver} nebo Google Chrome ver. >= %{min_chrome_ver}.
   cbp_txt_btn_ok         : Ok
   cbp_txt_btn_cancel     : Storno
+  cbp_txt_copy_link      : Kopírovat odkaz na obrázek a náhled

@@ -47,8 +47,9 @@ module AttachmentPatch
   class PastedImage
     def initialize(data, name)
       @raw = StringIO.new(Base64.decode64(data.to_s))
-      @name = name.to_s.strip + '.png'
-      @name = "picture.png" if @name.blank?
+      @name = name.to_s.strip
+      @name = 'picture.png' if @name.blank?
+      @name += '.png' unless @name.end_with?('.png')
     end
 
     def size

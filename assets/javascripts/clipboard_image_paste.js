@@ -58,7 +58,7 @@
     dlg_buttons[cbImagePaste.cbp_txt_btn_ok]     = insertAttachment;
     dlg_buttons[cbImagePaste.cbp_txt_btn_cancel] = function() { $(this).dialog("close"); };
 
-    $("#cbp_pasteDialog").dialog({
+    $("#cbp_paste_dlg").dialog({
       buttons: dlg_buttons,
       closeOnEscape: true,
       modal: true,
@@ -81,6 +81,23 @@
       resize: function(event, ui) {
         resizePanel();
       }
+    });
+  };
+
+  //----------------------------------------------------------------------------
+  // Show copy wiki link dialog.
+  function showCopyLink(btn, name) {
+    $("#cbp_image_link").val("!" + name.val() + "!");
+    $("#cbp_thumbnail_link").val("{{thumbnail(" + name.val() + ")}}");
+
+    $("#cbp_link_dlg").dialog({
+      closeOnEscape: true,
+      modal: true,
+      resizable: false,
+      dialogClass: "cbp_drop_shadow cbp_dlg_small",
+      position: { my: "left top", at: "left bottom", of: btn },
+      minHeight: 0,
+      width: "auto"
     });
   };
 
@@ -121,7 +138,7 @@
     // panelBox border width
     var panelBoxBorder = 5;
 
-    $("#cbp_panelBox").css("height", $(dialog).height() -  $("#cbp_headerBox").height() - 2 * panelBoxBorder - 10 + "px");
+    $("#cbp_panel_box").css("height", $(dialog).height() -  $("#cbp_header_box").height() - 2 * panelBoxBorder - 10 + "px");
 
     // if some image has been pasted, create new panel with new dimensions
     if (pastedImage) {
@@ -139,12 +156,12 @@
     }
 
     // remove old canvas
-    $("#cbp_panelBox").empty();
+    $("#cbp_panel_box").empty();
 
     // create and fill new canvas
     // compute scaled size
-    var boxw = $("#cbp_panelBox").width();
-    var boxh = $("#cbp_panelBox").height();
+    var boxw = $("#cbp_panel_box").width();
+    var boxh = $("#cbp_panel_box").height();
 
     if (pastedImage.width > boxw || pastedImage.height > boxh)
     {
@@ -179,7 +196,7 @@
     // draw image
     ctx.drawImage(pastedImage, 0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    $("#cbp_panelBox").append(panel);
+    $("#cbp_panel_box").append(panel);
 
     // create cropping handler
     $(panel).Jcrop({
@@ -267,7 +284,7 @@
 
       // Firefox allows images to be pasted into contenteditable elements
       pasteCatcher.setAttribute("contenteditable", "");
-      pasteCatcher.setAttribute("id", "cbp_pasteCatcher");
+      pasteCatcher.setAttribute("id", "cbp_paste_catcher");
 
       // We can hide the element and append it to the body,
       dialog.appendChild(pasteCatcher);
@@ -412,25 +429,39 @@
 
     dataUrl = dataUrl.substring(dataUrl.indexOf("iVBOR"));
 
-    elements = s.children("#cbp_imageData");
+    elements = s.children("#cbp_image_data");
     elements.attr("name", attachInpId + "[data]").val("");
     elements.attr("value", dataUrl).val(dataUrl);
 
     elements = s.children("input.name");
     elements.attr("name", attachInpId + "[name]").val("");
-    var pictureName = "picture" + attachId;
+    var pictureName = "picture" + attachId + ".png";
     elements.attr("value", pictureName).val(pictureName);
 
+    // limit user input for attachment file name
     elements.each(function() {
       $(this).blur(function() {
-        if(this.value == '') {
+        this.value = this.value.replace(/^\s+|\s+$/g, '');
+        if (this.value == '')
           this.value = this.defaultValue;
-        }
+        else if (this.value.search(/\.png$/) < 1)
+          this.value += ".png";
+        this.value = this.value.replace(/[\/\\!%\?\*:'"\|<>&]/g, "-");
+        this.value = this.value.replace(/ /g, "_");
       });
     });
 
     elements = s.children("input.description");
     elements.attr("name", attachInpId + "[description]").val("");
+
+    // add onclick handler for copy link button
+    elements = s.children("#cbp_link_btn");
+    elements.each(function() {
+      $(this).click(function(el) {
+        showCopyLink($(this), $(this).prev());
+        return false;
+      });
+    });
 
     fields.append(s);
 
