@@ -1,12 +1,17 @@
-h1. clipboard_image_paste
+h1. Redmine clipboard_image_paste plugin
 
 Paste (cropped) image from clipboard as an attachment.
+
+!https://raw.github.com/peclik/clipboard_image_paste/master/suppl/cbp_logo.png!
 
 * uses *pure client side JavaScript*
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
 * works *only in Google Chrome and Mozilla Firefox browsers*
 * translations: Bulgarian, Czech, English, French, Russian
+
+* homepage: https://github.com/peclik/clipboard_image_paste
+* Redmine page:  http://www.redmine.org/plugins/clipboard_image_paste
 
 --------------------------------------------------------------------------------
 
