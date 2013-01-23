@@ -12,7 +12,7 @@ Paste (cropped) image from clipboard as an attachment.
 
 h2. Compatibility:
 
-* Redmine 2.x.x, 1.4.x
+* Redmine 2.2.x, 2.1.x, 2.0.x, 1.4.x
 * *works only in Google Chrome and Mozilla Firefox browsers*
 * tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
 
@@ -51,7 +51,7 @@ h2. Changelog:
 [+] Added dialog to copy image link for wiki
 
 21.01.2013 RELEASED 1.1
-[!] Supports Redmine version >=1.4.0
+[!] Supports Redmine version 1.4.0 to 2.2.x
 [+] Added Russian translation
 
 18.01.2013 RELEASED 1.0
