@@ -6,7 +6,7 @@ Paste (cropped) image from clipboard as an attachment.
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
 * works *only in Google Chrome and Mozilla Firefox browsers*
-* translations: Bulgarian, Czech, English, Russian
+* translations: Bulgarian, Czech, English, French, Russian
 
 --------------------------------------------------------------------------------
 
@@ -27,6 +27,7 @@ h2. Authors:
 * used jQuery, jQuery UI and Jcrop javascript libraries
 * Ivan Cenov (Bulgarian translation) [https://github.com/jwalkerbg]
 * AlexStein (Russian translation) [https://github.com/AlexStein]
+* octane100 (French translation) [https://github.com/octane100]
 
 
 --------------------------------------------------------------------------------
@@ -44,6 +45,8 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+[+] Added French translation
+
 22.01.2013 RELEASED 1.2
 [+] Added dialog to copy image link for wiki
 
