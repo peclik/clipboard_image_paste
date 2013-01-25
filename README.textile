@@ -50,6 +50,7 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+25.01.2013 RELEASED 1.3
 [+] Added French translation
 
 22.01.2013 RELEASED 1.2
