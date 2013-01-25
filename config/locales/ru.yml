@@ -12,4 +12,4 @@ ru:
   cbp_txt_wrong_browser  : Ваш браузер не может вставлять изображения. Используйте Mozilla Firefox версий >= %{min_firefox_ver} или Google Chrome версии >= %{min_chrome_ver}.
   cbp_txt_btn_ok         : ОК
   cbp_txt_btn_cancel     : Отмена
-  cbp_txt_copy_link      : Copy image and thumbnail link
+  cbp_txt_copy_link      : Ссылка на изображение и превью
