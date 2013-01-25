@@ -1,0 +1,15 @@
+# German strings go here
+de:
+  cbp_txt_add_image      : Bild aus Zwischenablage einfügen
+  cbp_txt_crop_box       : Zuschneiderahmen
+  cbp_txt_print          : Verwenden Sie die Druck-Taste und danach Strg+V.
+  cbp_txt_select         : Verwenden Sie die Maus um einen bestimmten Bereich des Bildes auszuwählen.
+  cbp_txt_deselect       : Klicken Sie außerhalb der Auswahl um die Auswahl aufzuheben.
+  cbp_txt_empty_cb       : Die Zwischenablage ist leer. Drücken Sie die Druck-Taste erneut.
+  cbp_txt_no_image_cb    : Die Zwischenablage enthält kein Bild. Drücken Sie die Druck-Taste erneut.
+  cbp_txt_no_image_pst   : Es wurde noch kein Bild eingefügt. Fügen Sie zuerst ein Bild hinzu.
+  cbp_txt_too_many_files : Eine weitere Anlage kann nicht hinzugefügt werden. Die Anzahl der erlaubten Dateianhänge für ein Update ist auf {Max_attachments} % begrenzt.
+  cbp_txt_wrong_browser  : Ihr aktueller Browser kann keine Bilder hinzufügen. Bitte benutzen Sie Mozilla Firefox Version > = {Min_firefox_ver} % oder Google Chrome Version > = {Min_chrome_ver} %.
+  cbp_txt_btn_ok         : Ok
+  cbp_txt_btn_cancel     : Abbrechen
+  cbp_txt_copy_link      : Link zum Bild und zur Miniaturansicht kopieren
