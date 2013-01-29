@@ -213,13 +213,22 @@
   };
 
   //----------------------------------------------------------------------------
+  // printf like function
+  // usage: output = printf('{1} to {2}, {1} taken first', 34, 55)
+  function printf(fmt) {
+    var args = arguments;
+    return fmt.replace(/{(\d+)}/g, function(match, number) {
+      return typeof args[number] != 'undefined' ? args[number] : match;
+    });
+  };
+
+  //----------------------------------------------------------------------------
   // Show crop box dimensions and crop preview.
   function showPreview(coords)
   {
     if (coords && coords.w != 0 && coords.h != 0)
-      showInstructions("box", cbImagePaste.cbp_txt_crop_box + ":" +
-        "  x=" + Math.round(coords.x) + "  y=" + Math.round(coords.y) +
-        "  width=" + Math.round(coords.w) + "  height=" + Math.round(coords.h));
+      showInstructions("box", printf(cbImagePaste.cbp_txt_crop_box,
+        Math.round(coords.x), Math.round(coords.y), Math.round(coords.w), Math.round(coords.h)));
     else {
       showInstructions("select");
       coords = {x:0, y:0, w:pastedImage.width, h:pastedImage.height};
@@ -425,7 +434,7 @@
     // show thumbnail in attachment preview
     var elements = s.find("#cbp_attach_thumbnail");
     elements.attr("src", dataUrl);
-    elements.attr("title", "image attachment " + attachId + " preview").val("");
+    //elements.attr("title", "image attachment " + attachId + " preview").val("");
 
     dataUrl = dataUrl.substring(dataUrl.indexOf("iVBOR"));
 

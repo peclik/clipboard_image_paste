@@ -8,7 +8,7 @@
 <!-- input field span inspired by redmine/app/views/attachments/_form.html.erb -->
 <span id="cbp_image_field" style="display:none">
   <span id="cbp_attach_thumbnail_box">
-    <img id="cbp_attach_thumbnail" title="attachment 1 preview"/>
+    <img id="cbp_attach_thumbnail"/>
   </span>
   <%= hidden_field_tag 'attachments[nnnnn][data]', '', :id => 'cbp_image_data' %>
   <%= text_field_tag 'attachments[nnnnn][name]', '', :id => nil, :class => 'name', :maxlength => 50 %>

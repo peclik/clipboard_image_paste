@@ -1,15 +1,15 @@
 # French strings go here
 fr:
-  cbp_txt_add_image      : Ajouter une image à partir du presse-papier
-  cbp_txt_crop_box       : zone de rognage
-  cbp_txt_print          : Utilisez la touche Impression Ecran puis appuyez sur Ctrl+V.
-  cbp_txt_select         : Utilisez la souris pour sélectionner une partie spécifique de l'image.
-  cbp_txt_deselect       : Cliquez en dehors de la zone pour déselectionner.
-  cbp_txt_empty_cb       : Le presse-papier est vide. Essayez de réappuyer sur la touche Impression Ecran.
-  cbp_txt_no_image_cb    : Aucune image trouvée dans le presse papier. Essayez à nouveau en appuyant sur la touche Impression Ecran.
-  cbp_txt_no_image_pst   : Aucune image n'a été collée pour l'instant. Commencez par en insérer une.
-  cbp_txt_too_many_files : Impossible de joindre un nouveau fichier. Nombre maximum de fichiers autorisés dans une mise à jour limité à %{max_attachments}.
-  cbp_txt_wrong_browser  : Votre navigateur actuel ne peut pas coller d'images. Veuillez utiliser Mozilla Firefox ver. >= %{min_firefox_ver} ou Google Chrome ver. >= %{min_chrome_ver}.
-  cbp_txt_btn_ok         : Ok
-  cbp_txt_btn_cancel     : Annuler
-  cbp_txt_copy_link      : Copier image et lien sur miniature
+  cbp_txt_add_image      : 'Ajouter une image à partir du presse-papier'
+  cbp_txt_crop_box       : 'zone de rognage:  x={1}  y={2}  largeur={3}  hauteur={4}'
+  cbp_txt_print          : 'Utilisez la touche Impression Ecran puis appuyez sur Ctrl+V.'
+  cbp_txt_select         : 'Utilisez la souris pour sélectionner une partie spécifique de l''image.'
+  cbp_txt_deselect       : 'Cliquez en dehors de la zone pour déselectionner.'
+  cbp_txt_empty_cb       : 'Le presse-papier est vide. Essayez de réappuyer sur la touche Impression Ecran.'
+  cbp_txt_no_image_cb    : 'Aucune image trouvée dans le presse papier. Essayez à nouveau en appuyant sur la touche Impression Ecran.'
+  cbp_txt_no_image_pst   : 'Aucune image n''a été collée pour l''instant. Commencez par en insérer une.'
+  cbp_txt_too_many_files : 'Impossible de joindre un nouveau fichier. Nombre maximum de fichiers autorisés dans une mise à jour limité à %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Votre navigateur actuel ne peut pas coller d''images. Veuillez utiliser Mozilla Firefox ver. >= %{min_firefox_ver} ou Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Annuler'
+  cbp_txt_copy_link      : 'Copier image et lien sur miniature'

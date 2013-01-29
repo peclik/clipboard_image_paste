@@ -1,15 +1,15 @@
 # Czech strings go here
 cs:
-  cbp_txt_add_image      : Přidat obrázek ze schránky
-  cbp_txt_crop_box       : výřez
-  cbp_txt_print          : Stiskněte klávesu PrintScreen a potom Ctrl+V.
-  cbp_txt_select         : Myší můžete označit potřebnou část obrázku.
-  cbp_txt_deselect       : Kliknutím mimo označenou část zrušíte výběr.
-  cbp_txt_empty_cb       : Schránka je prázdná. Zkuste klávesu PrintScreen znovu.
-  cbp_txt_no_image_cb    : Ve schránce nebyl nalezen obrázek. Zkuste klávesu PrintScreen znovu.
-  cbp_txt_no_image_pst   : Pro pokračování je nutné nejrpve vložit obrázek.
-  cbp_txt_too_many_files : Další přílohu nelze vložit. Počet příloh pro jednu aktualizaci je omezen na %{max_attachments}.
-  cbp_txt_wrong_browser  : Váš současný prohlížeč nepodporuje vkládání obrázků. Použijte, prosím, prohlížeč Mozilla Firefox ver. >= %{min_firefox_ver} nebo Google Chrome ver. >= %{min_chrome_ver}.
-  cbp_txt_btn_ok         : Ok
-  cbp_txt_btn_cancel     : Storno
-  cbp_txt_copy_link      : Kopírovat odkaz na obrázek a náhled
+  cbp_txt_add_image      : 'Přidat obrázek ze schránky'
+  cbp_txt_crop_box       : 'výřez:  x={1}  y={2}  šířka={3}  výška={4}'
+  cbp_txt_print          : 'Stiskněte klávesu PrintScreen a potom Ctrl+V.'
+  cbp_txt_select         : 'Myší můžete označit potřebnou část obrázku.'
+  cbp_txt_deselect       : 'Kliknutím mimo označenou část zrušíte výběr.'
+  cbp_txt_empty_cb       : 'Schránka je prázdná. Zkuste klávesu PrintScreen znovu.'
+  cbp_txt_no_image_cb    : 'Ve schránce nebyl nalezen obrázek. Zkuste klávesu PrintScreen znovu.'
+  cbp_txt_no_image_pst   : 'Pro pokračování je nutné nejrpve vložit obrázek.'
+  cbp_txt_too_many_files : 'Další přílohu nelze vložit. Počet příloh pro jednu aktualizaci je omezen na %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Váš současný prohlížeč nepodporuje vkládání obrázků. Použijte, prosím, prohlížeč Mozilla Firefox ver. >= %{min_firefox_ver} nebo Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Storno'
+  cbp_txt_copy_link      : 'Kopírovat odkaz na obrázek a náhled'

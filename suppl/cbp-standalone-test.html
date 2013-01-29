@@ -37,7 +37,7 @@
 <!-- input field span inspired by redmine/app/views/attachments/_form.html.erb -->
 <span id="cbp_image_field" style="display:none">
   <span id="cbp_attach_thumbnail_box">
-    <img id="cbp_attach_thumbnail" title="attachment 1 preview"/>
+    <img id="cbp_attach_thumbnail"/>
   </span>
   <input type="hidden" name="attachments[nnnnn][data]" id="cbp_image_data"/>
   <input type="text"   name="attachments[nnnnn][name]" class="name" maxlength=50 />
@@ -50,7 +50,7 @@
       <script type="text/javascript">
         // translated labels go here (inside namespace)
         (function(cbImagePaste, $, undefined) {
-          cbImagePaste.cbp_txt_crop_box       = "crop box";
+          cbImagePaste.cbp_txt_crop_box       = "crop box:  x={1}  y={2}  width={3}  height={4}";
           cbImagePaste.cbp_txt_print          = "Use PrintScreen key and then Ctrl+V.";
           cbImagePaste.cbp_txt_select         = "Use mouse to select specific part of the image.";
           cbImagePaste.cbp_txt_deselect       = "Click outside selection to deselect.";
