@@ -1,0 +1,15 @@
+# Japanese strings go here
+ja:
+  cbp_txt_add_image      : 'クリップボードから画像を追加'
+  cbp_txt_crop_box       : '選択した領域:  x={1}  y={2}  幅={3}  高さ={4}'
+  cbp_txt_print          : 'Ctrl+Vで画像を貼り付けてください。'
+  cbp_txt_select         : 'ドラッグして画像の貼り付けたい領域を選択してください。'
+  cbp_txt_deselect       : '選択を解除するには領域の外側をクリックしてください。'
+  cbp_txt_empty_cb       : 'クリップボードが空です。'
+  cbp_txt_no_image_cb    : 'クリップボードに画像がありません。'
+  cbp_txt_no_image_pst   : '何も画像が貼り付けられていません。'
+  cbp_txt_too_many_files : 'これ以上ファイルを追加できません。一度の更新で添付できるファイルの数は%{max_attachments}個までです。'
+  cbp_txt_wrong_browser  : 'お使いのブラウザはクリップボードAPIをサポートしていません。Firefox %{min_firefox_ver}以上かGoogle Chrome %{min_chrome_ver}以上をお使いください。'
+  cbp_txt_btn_ok         : 'OK'
+  cbp_txt_btn_cancel     : 'キャンセル'
+  cbp_txt_copy_link      : '画像とサムネイルへのリンク'
