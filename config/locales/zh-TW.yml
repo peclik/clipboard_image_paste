@@ -1,0 +1,15 @@
+# Taiwanese-Mandarin strings go here
+zh-TW:
+  cbp_txt_add_image      : '新增剪貼簿的截圖 (暫不支援IE瀏覽器)'
+  cbp_txt_crop_box       : '拖曳範圍: x={1} y={2} width={3} height={4}'
+  cbp_txt_print          : '使用PrintScreen鍵，然後按Ctrl+ V.'
+  cbp_txt_select         : '使用滑鼠框選圖片的特定部分.'
+  cbp_txt_deselect       : '點擊外部來取消選擇'
+  cbp_txt_empty_cb       : '剪貼簿是空的。再次嘗試PrintScreen鍵.'
+  cbp_txt_no_image_cb    : '沒有圖片在剪貼簿中。再次嘗試PrintScreen鍵.'
+  cbp_txt_no_image_pst   : '沒有圖片被貼入.'
+  cbp_txt_too_many_files : '無法新增圖片。最大的附件數量為 %{max_attachments}.'
+  cbp_txt_wrong_browser  : '您目前的瀏覽器不能貼上圖片，請使用Firefox >= %{min_firefox_ver} or Chrome >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : '確定'
+  cbp_txt_btn_cancel     : '取消'
+  cbp_txt_copy_link      : '複製圖片和縮略圖鏈接'

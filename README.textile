@@ -8,7 +8,7 @@ Paste (cropped) image from clipboard as an attachment.
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
 * works *only in Google Chrome and Mozilla Firefox browsers*
-* translations: Bulgarian, Czech, English, French, German, Russian
+* translations: Bulgarian, Czech, English, French, German, Japanese, Russian, Taiwanese Mandarin, Turkish
 
 * homepage: https://github.com/peclik/clipboard_image_paste
 * Redmine page:  http://www.redmine.org/plugins/clipboard_image_paste
@@ -34,6 +34,9 @@ h2. Authors:
 * AlexStein (Russian translation) [https://github.com/AlexStein]
 * octane100 (French translation) [https://github.com/octane100]
 * Karsten Hoffrath (German translation) [https://github.com/khoffrath]
+* ks780 (Turkish translation) [https://github.com/ks780]
+* Daigo Uchiyama (Japanese translation) [https://github.com/ucho]
+* jaelys (Taiwanese-Mandarin translation) [https://github.com/jaelys]
 
 
 --------------------------------------------------------------------------------
@@ -51,8 +54,8 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
-NOT YET RELEASED
-[+] Added German translation
+06.03.2013 RELEASED 1.4
+[+] Added German, Japanese, Taiwanese Mandarin, Turkish translations
 
 25.01.2013 RELEASED 1.3
 [+] Added French translation
