@@ -1,0 +1,15 @@
+# Turkish strings go here
+tr:
+  cbp_txt_add_image      : 'Panodan resim ekleme'
+  cbp_txt_crop_box       : 'Seçilen alan:  x={1}  y={2}  genişlik={3}  yükseklik={4}'
+  cbp_txt_print          : 'PrintScreen tuşu ile ekran görüntüsünü panoya alabilir, Panodaki resmi Ctrl+V ile buraya yapıştırabilirsiniz. '
+  cbp_txt_select         : 'Fareyi kullanarak resmin belirli bir bölümünü seçebilirsiniz.'
+  cbp_txt_deselect       : 'Seçimi iptal etmek için seçim dışına tıklayınız.'
+  cbp_txt_empty_cb       : 'Pano boş, lütfen PrintScreen ile ekran görüntüsünü alınız'
+  cbp_txt_no_image_cb    : 'Panoda resim bulunamadı, lütfen PrintScreen ile ekran görüntüsünü alınız'
+  cbp_txt_no_image_pst   : 'Henüz resim eklenmedi, lütfen önce resim ekleyiniz.'
+  cbp_txt_too_many_files : 'Başka resim eklenemiyor. Bir güncellemede izin verilen en yüksek ekleme sayısı : %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Kullandığınız tarayıcı resim yapıştırmaya izin vermiyor. Lütfen Firefox %{min_firefox_ver} yada Chrome %{min_chrome_ver} ve üstü kullanınız.'
+  cbp_txt_btn_ok         : 'Tamam'
+  cbp_txt_btn_cancel     : 'İptal'
+  cbp_txt_copy_link      : 'Resim ve küçük resmin adreslerini kopyala'
