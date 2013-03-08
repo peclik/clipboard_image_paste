@@ -1,0 +1,15 @@
+# Brazilian Portuguese strings go here
+pt-BR:
+  cbp_txt_add_image      : 'Adicionar imagem da área de transferência'
+  cbp_txt_crop_box       : 'crop box: x={1} y={2} width={3} height={4}'
+  cbp_txt_print          : 'Usar o PrintScreen e usar o Ctrl+V.'
+  cbp_txt_select         : 'Usar o mouse para selecionar parte da imagem.'
+  cbp_txt_deselect       : 'Clique fora de seleção para desmarcar.'
+  cbp_txt_empty_cb       : 'A área de transferência está vazia. Tente teclar no PrintScreen novamente.'
+  cbp_txt_no_image_cb    : 'Nenhuma imagem encontrada na área de transferência. Tente teclar no PrintScreen novamente.'
+  cbp_txt_no_image_pst   : 'Nenhuma imagem foi colada ainda. Insira alguns primeiro.'
+  cbp_txt_too_many_files : 'O seu navegador atual nãpode colar fotos. Por favor, use o Mozilla Firefox %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'O seu navegador atual nãpode colar fotos. Por favor, use o Mozilla Firefox ver. >= %{min_firefox_ver} or Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Cancelar'
+  cbp_txt_copy_link      : 'Copiar imagem e link miniatura'
