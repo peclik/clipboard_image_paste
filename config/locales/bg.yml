@@ -12,4 +12,4 @@ bg:
   cbp_txt_wrong_browser  : 'Вашият браузър не може да да копира изображения. Моля ползвайте Mozilla Firefox версия >= %{min_firefox_ver} или Google Chrome версия >= %{min_chrome_ver}.'
   cbp_txt_btn_ok         : 'ОК'
   cbp_txt_btn_cancel     : 'Отказ'
-  cbp_txt_copy_link      : 'Copy image and thumbnail link'
+  cbp_txt_copy_link      : 'Връзки към изображението и миниатюрата му'
