@@ -533,7 +533,7 @@
     if (!attachFields)
       return;
 
-    addFile = attachFields.next("span.add_attachment");
+    var addFile = attachFields.next("span.add_attachment");
     if (!addFile)
       return;
 
