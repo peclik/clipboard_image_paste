@@ -55,8 +55,9 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
-21.03.2013 RELEASED 1.5
-[-] JavaScript fix for Redmine 2.3 compatibility
+22.03.2013 RELEASED 1.5
+[!] Redmine 2.3 compatible
+[*] JavaScript/JQuery fix for Redmine 2.3 compatibility
 [+] Added Brazilian Portuguese translation
 
 06.03.2013 RELEASED 1.4
