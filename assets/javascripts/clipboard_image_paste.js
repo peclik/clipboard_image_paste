@@ -10,7 +10,6 @@
 // - GNU GENERAL PUBLIC LICENSE Version 2
 //******************************************************************************
 
-
 //----------------------------------------------------------------------------
 // Enclose everything inside a namespace.
 (function(cbImagePaste, $, undefined) {
@@ -36,13 +35,7 @@
   //----------------------------------------------------------------------------
   // Show paste dialog.
   cbImagePaste.showPasteDialog = function() {
-    var browserMajor = parseInt($.browser.version, 10);
-    //alert("maj=" + browserMajor + "  webkit=" + $.browser.webkit + "  min_chrome=" + cbImagePaste.cbp_min_chrome_ver);
-
-    if (!(
-        ($.browser.mozilla && browserMajor >= cbImagePaste.cbp_min_firefox_ver) ||
-        ($.browser.webkit && typeof window.chrome === "object" && browserMajor >= cbImagePaste.cbp_min_chrome_ver)
-       )) {
+    if (!isBrowserSupported()) {
       alert(cbImagePaste.cbp_txt_wrong_browser);
       return false;
     }
@@ -82,6 +75,27 @@
         resizePanel();
       }
     });
+  };
+
+  //----------------------------------------------------------------------------
+  // Check supported browser version.
+  // We support Firefox & Chrome only. Even if other browsers use the same
+  // layout engine (Gecko or WebKit) thay may not support Ctrl+V properly.
+  function isBrowserSupported() {
+    //alert("min_firefox=" + cbImagePaste.cbp_min_firefox_ver + "\n" +
+    //      "min_chrome=" + cbImagePaste.cbp_min_chrome_ver + "\n" +
+    //      "agent='" + navigator.userAgent + "'\n");
+
+    var M = navigator.userAgent.match(/(firefox|webkit)\/?\s*(\.?\d+(\.\d+)*)/i);
+
+    if (M) {
+      var browserMajor = parseInt(M[2], 10);
+      M[1] = M[1].toLowerCase();
+      if ((M[1] == 'webkit' && typeof window.chrome === "object" && browserMajor >= cbImagePaste.cbp_min_chrome_ver) ||
+          (M[1] == 'firefox' && browserMajor >= cbImagePaste.cbp_min_firefox_ver))
+        return true;
+    }
+    return false;
   };
 
   //----------------------------------------------------------------------------

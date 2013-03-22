@@ -11,13 +11,13 @@ Paste (cropped) image from clipboard as an attachment.
 * translations: Bulgarian, Czech, English, French, German, Japanese, Portuguese (Brazil), Russian, Taiwanese Mandarin, Turkish
 
 * homepage: https://github.com/peclik/clipboard_image_paste
-* Redmine page:  http://www.redmine.org/plugins/clipboard_image_paste
+* Redmine page: http://www.redmine.org/plugins/clipboard_image_paste
 
 --------------------------------------------------------------------------------
 
 h2. Compatibility:
 
-* Redmine 2.2.x, 2.1.x, 2.0.x, 1.4.x
+* Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
 * *works only in Google Chrome and Mozilla Firefox browsers*
 * tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
 
@@ -38,6 +38,7 @@ h2. Authors:
 * Daigo Uchiyama (Japanese translation) [https://github.com/ucho]
 * jaelys (Taiwanese Mandarin translation) [https://github.com/jaelys]
 * beandj (Brazilian Portuguese translation) [https://github.com/beandj]
+* Yuri Tkachenko (2.3 compatibility fix) [https://github.com/tamtamchik]
 
 --------------------------------------------------------------------------------
 
@@ -54,7 +55,8 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
-NOT YET RELEASED 1.5a
+21.03.2013 RELEASED 1.5
+[-] JavaScript fix for Redmine 2.3 compatibility
 [+] Added Brazilian Portuguese translation
 
 06.03.2013 RELEASED 1.4
