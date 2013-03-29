@@ -1,0 +1,15 @@
+# Spanish strings go here
+es:
+  cbp_txt_add_image      : 'Agregar imagen desde el portapapeles'
+  cbp_txt_crop_box       : 'cuadro de recorte:  x={1}  y={2}  ancho={3}  alto={4}'
+  cbp_txt_print          : 'Presione la tecla ImprPant y luego Ctrl+V.'
+  cbp_txt_select         : 'Use el ratón para seleccionar una parte específica de la imagen.'
+  cbp_txt_deselect       : 'Click outside selection to deselect.'
+  cbp_txt_empty_cb       : 'El portapapeles está vacío. Intenta presionar la tecla ImprPant nuevamente.'
+  cbp_txt_no_image_cb    : 'No se encontró una imagen en el portapapeles. Preiona la tecla ImprPant nuevamente.'
+  cbp_txt_no_image_pst   : 'No se ha pegado una imagen aún. Inserte alguna primero.'
+  cbp_txt_too_many_files : 'No se puede adjuntar otro adjunto. El número máximo de adjuntos permitidos por actualización está limitado a %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Su navegador actual no permite pegar imágenes. Por favor use Mozilla Firefox ver. >= %{min_firefox_ver} o Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Aceptar'
+  cbp_txt_btn_cancel     : 'Cancelar'
+  cbp_txt_copy_link      : 'Copiar vínculo de la imagen y recorte'
