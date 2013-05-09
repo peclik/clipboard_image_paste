@@ -1,0 +1,15 @@
+# Italian strings go here
+it:
+  cbp_txt_add_image      : 'Aggiungi immagine dalla clipboard'
+  cbp_txt_crop_box       : 'crop box: x={1} y={2} width={3} height={4}'
+  cbp_txt_print          : 'Usa il tasto PrintScreen e poi Ctrl+V.'
+  cbp_txt_select         : "Usa il mouse per selezionare parti specifiche dell'immagine."
+  cbp_txt_deselect       : 'Click fuori dalla selezione per deselezionare.'
+  cbp_txt_empty_cb       : 'La clipboard è vuota. Prova a ripremere il tasto PrintScreen.'
+  cbp_txt_no_image_cb    : 'Nessuna immagine trovata nella clipboard. Prova a premere nuovamente PrintScreen.'
+  cbp_txt_no_image_pst   : 'Nessuna immagine è stata ancora incollata. Inseriscine prima qualcuna.'
+  cbp_txt_too_many_files : 'Impossibile aggiungere altri allegati. Il numero massimo di allegati ammesso è %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Il tuo browser non è in grado di incollare immagini. Per cortesia usa Mozilla Firefox ver. >= %{min_firefox_ver} oppure Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Annulla'
+  cbp_txt_copy_link      : 'Copia immagine e collegamento a miniatura'
