@@ -1,0 +1,15 @@
+# Polish strings go here
+pl:
+  cbp_txt_add_image      : 'Wstaw obraz ze schowka'
+  cbp_txt_crop_box       : 'przytnij do prostokąta:  x={1}  y={2}  szerokość={3}  wysokość={4}'
+  cbp_txt_print          : 'Wciśnij klawisz PrintScreen, a nastepnie Ctrl+V.'
+  cbp_txt_select         : 'Za pomocą myszy wybierz obszar obrazu.'
+  cbp_txt_deselect       : 'Kliknij poza zaznaczeniem aby odznaczyć.'
+  cbp_txt_empty_cb       : 'Schowek jest pusty. Użyj klawisza PrintScreen ponownie.'
+  cbp_txt_no_image_cb    : 'Brak obrazu w schowku. Uzyj klawisza PrintScreen ponownie.'
+  cbp_txt_no_image_pst   : 'Nie wstawiono jeszcze żadnego obrazu. Wstaw najpierw obraz.'
+  cbp_txt_too_many_files : 'Nie można dodać kolejnego załącznika. Ilość załączników dozwolonych w jednym uaktualnieniu jest ograniczona do %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Twoja aktualna przeglądarka nie obsługuje wklejania obrazów. Użyj przeglądarki Mozilla Firefox w wersji >= %{min_firefox_ver} lub Google Chrome w wersji >= %{min_chrome_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Anuluj'
+  cbp_txt_copy_link      : 'Kopiuj obrazek i link do miniaturki'
