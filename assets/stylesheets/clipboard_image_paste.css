@@ -79,3 +79,13 @@
 .cbp_dlg_small {
   font-size: 10pt;
 }
+
+/* Clipboard Image Paste button */
+.jstb_cbp {
+  background-image: url(../../../images/jstoolbar/bt_img.png);
+}
+
+/* FIXME: dirty code. Disable button in comment form */
+[id^="add_comment_form"] .jstb_cbp, [id^="wikiextensions_comment_"] .jstb_cbp {
+  display: none;
+}

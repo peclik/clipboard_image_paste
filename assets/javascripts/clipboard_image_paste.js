@@ -533,6 +533,50 @@
     s.remove();
   };
 
+  //----------------------------------------------------------------------------
+  cbImagePaste.onEncloseSelection = function(str) {
+    var attachId    = cbImagePaste.cbp_act_update_id + "-" + imageAttachCount;
+    var pictureName = "picture" + attachId + ".png";
+    return str + "{{thumbnail(" + pictureName + ", size=500)}}";
+  }
+
+  function insertJsToolBarButton(toolbar, key, button, insertAfter){
+    var newElements = {}
+    for (var i in toolbar.elements) {
+      newElements[i] = toolbar.elements[i];
+      if (newElements[i] == insertAfter)
+        newElements[key] = button;
+    }
+    toolbar.elements = newElements;
+  }
+
+  function insertCbpJsToolBarButton(toolbar, insertAfter){
+    var button =  {
+      type: 'button',
+      title: cbImagePaste.cbp_txt_add_image,
+      fn: {
+        wiki: function () { 
+          var toolbar = this;
+          cbImagePaste.showPasteDialog();
+
+          var dlg_buttons = {};
+          dlg_buttons[cbImagePaste.cbp_txt_btn_ok] = function() {
+            var beforeCount = imageAttachCount;
+            var ret = insertAttachment();
+            var afterCount = imageAttachCount;
+            if (beforeCount != afterCount){
+              toolbar.encloseSelection('','', cbImagePaste.onEncloseSelection);
+            }
+            return ret;
+          };
+          dlg_buttons[cbImagePaste.cbp_txt_btn_cancel] = function() { $(this).dialog("close"); };
+          $("#cbp_paste_dlg").dialog('option', 'buttons', dlg_buttons);
+        }
+      }
+    }
+    insertJsToolBarButton(toolbar, 'cbp', button, insertAfter)
+  }
+
   //------------------------------------------------------------------------------
   // Move image attachment block to proper place (after "add another file" link).
   // and detach element not required in DOM.
@@ -560,6 +604,17 @@
       return;
 
     addFile.after(imageForm);
+
+    // modify jsToolBar for objects to be created.
+    if(typeof jsToolBar !== 'undefined'){
+      insertCbpJsToolBarButton(jsToolBar.prototype, jsToolBar.prototype.elements.img);
+    }
+    
+    // modify jsToolBar for objects that already exists.
+    if(typeof wikiToolbar !== 'undefined'){
+      insertCbpJsToolBarButton(wikiToolbar, wikiToolbar.elements.img);
+      wikiToolbar.draw();
+    }
   });
 
 }(window.cbImagePaste = window.cbImagePaste || {}, jQuery));
