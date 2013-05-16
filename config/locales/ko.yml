@@ -1,0 +1,15 @@
+# Korean strings go here
+ko:
+  cbp_txt_add_image      : '클립보드 이미지 추가'
+  cbp_txt_crop_box       : '자를영역:  X={1}  Y={2}  넓이={3}  높이={4}'
+  cbp_txt_print          : '키보드 우측 상단의 PrintScreen 키로 캡춰 또는 이미지 복사 후 Ctrl+V 로 붙여넣으세요.'
+  cbp_txt_select         : '마우스로 사용할 영역을 선택하세요.'
+  cbp_txt_deselect       : '선택영역 바깥부분을 클릭하면 선택취소됩니다.'
+  cbp_txt_empty_cb       : '클립보드가 비워 있습니다. PrintScreen 키로 캡춰하세요.'
+  cbp_txt_no_image_cb    : '클립보드내용이 이미지가 아닙니다. PrintScreen  키로 캡춰하세요.'
+  cbp_txt_no_image_pst   : '이미지가 없습니다.'
+  cbp_txt_too_many_files : '등록실패. 최대 %{max_attachments}개의 이미지를 등록할 수 있습니다.'
+  cbp_txt_wrong_browser  : '사용할 수 없는 브라우져입니다.(IE 는 지원하지 않습니다.) Firefox %{min_firefox_ver} 버전 이상 또는 구글크롬 %{min_chrome_ver} 이상 지원합니다.'
+  cbp_txt_btn_ok         : '확인'
+  cbp_txt_btn_cancel     : '취소'
+  cbp_txt_copy_link      : '이미지 링크와 썸네일 링크'
