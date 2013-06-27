@@ -60,7 +60,7 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
-NOT YET RELEASED 1.7
+27.06.2013 RELEASED 1.7
 [-] JavaScript fix for Firefox 22 compatibility
 [+] Added Korean translation
 
