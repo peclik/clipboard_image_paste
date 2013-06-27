@@ -26,6 +26,10 @@
   // actual crop coordinates
   var cropCoords;
 
+  // true if the browser has compatible clipboard
+  var hasClipboard;
+
+
   //****************************************************************************
   //
   // paste dialog stuff:
@@ -91,7 +95,11 @@
     if (M) {
       var browserMajor = parseInt(M[2], 10);
       M[1] = M[1].toLowerCase();
-      if ((M[1] == 'webkit' && typeof window.chrome === "object" && browserMajor >= cbImagePaste.cbp_min_chrome_ver) ||
+
+      var isCompatChrome = (M[1] == 'webkit' && typeof window.chrome === "object" && browserMajor >= cbImagePaste.cbp_min_chrome_ver);
+      hasClipboard = isCompatChrome;
+
+      if (isCompatChrome ||
           (M[1] == 'firefox' && browserMajor >= cbImagePaste.cbp_min_firefox_ver))
         return true;
     }
@@ -339,7 +347,7 @@
   // Handle paste events
   function pasteHandler(e) {
     // We need to check if event.clipboardData is supported (Chrome)
-    if (e.clipboardData) {
+    if (hasClipboard && e.clipboardData) {
       // Get the items from the clipboard
       var items = e.clipboardData.items;
       if (!items)
@@ -360,7 +368,7 @@
             return;
           }
         }
-       alert(cbImagePaste.cbp_txt_no_image_cb);
+        alert(cbImagePaste.cbp_txt_no_image_cb);
       }
     // If we can't handle clipboard data directly (Firefox),
     // we need to read what was pasted from the contenteditable element
