@@ -101,3 +101,7 @@ end
 unless Project.included_modules.include? AttachmentPatch
   Project.send(:include, AttachmentPatch)
 end
+
+unless unless KbArticle.included_modules.include? AttachmentPatch
+  KbArticle.send(:include, AttachmentPatch)
+end
