@@ -17,8 +17,12 @@ Paste (cropped) image from clipboard as an attachment.
 
 h2. Installation:
 
-* @git clone https://github.com/peclik/clipboard_image_paste.git
+* download one of:
+** latest release zip: https://github.com/peclik/clipboard_image_paste/archive/v1.7.zip
+** development zip: https://github.com/peclik/clipboard_image_paste/archive/master.zip
+** git: @git clone https://github.com/peclik/clipboard_image_paste.git
  plugins/clipboard_image_paste@
+* place plugin files into @plugins/clipboard_image_paste@ folder (strip possible @-master@ or @-version@ suffix)
 * it's recommended to install RMagick gem, otherwise attached images will not show in exported PDF files
 
 --------------------------------------------------------------------------------
@@ -28,9 +32,9 @@ h2. Compatibility:
 * Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
 * *works only in Google Chrome and Mozilla Firefox browsers*
 * tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
-* plug-ins:
+* plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
-* incompatible plug-ins:
+* incompatible plug-ins (not working together with clipboard_image_paste):
 ** LaTeX MathJax [https://github.com/process91/redmine_latex_mathjax]
 
 --------------------------------------------------------------------------------
@@ -62,8 +66,10 @@ h2. Authors:
 h2. Known issues:
 
 * attached image will be visibile in exported PDFs only if RMagick is installed
-  (this is a limit of PDF export in Redmine, alpha channel must be removed from
+  (this is a limit of PDF export in Redmine - alpha channel must be removed from
   png image)
+* thumbnails using @{{thumbnail}}@ macro will not be shown in exported PDFs 
+  (another Redmine's PDF export limit - see http://www.redmine.org/issues/13051)
 * maximum attachment size is checked against BASE64 encoded image data (even
   smaller images than the maximum allowed attachment size can be rejected)
 * clipboard_image_paste's 'Add picture from clipboard' command combines number
@@ -77,7 +83,7 @@ h2. Changelog:
 
 <pre>
 NOT YET RELEASED 1.8
-[-] Attached images are visible in exported PDF files (needs RMagick gem)
+[-] Attached images are visible in exported PDF files (requires RMagick gem)
 [+] Added support for KbArticle plug-in
 
 27.06.2013 RELEASED 1.7
