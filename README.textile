@@ -20,6 +20,8 @@ h2. Compatibility:
 * Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
 * *works only in Google Chrome and Mozilla Firefox browsers*
 * tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
+* plug-ins:
+** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
 
 --------------------------------------------------------------------------------
 
@@ -60,6 +62,9 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+NOT YET RELEASED 1.8
+[+] Added support for KbArticle plug-in
+
 27.06.2013 RELEASED 1.7
 [-] JavaScript fix for Firefox 22 compatibility
 [+] Added Korean translation
