@@ -46,7 +46,7 @@ module AttachmentPatch
   # Mimics uploaded file field data.
   class PastedImage
     def initialize(data, name)
-      @raw = StringIO.new(Base64.decode64(data.to_s))
+      @raw = StringIO.new(remove_alpha(Base64.decode64(data.to_s)))
       @name = name.to_s.strip
       @name = 'picture.png' if @name.blank?
       @name += '.png' unless @name.end_with?('.png')
@@ -67,6 +67,29 @@ module AttachmentPatch
     def read(*args)
       @raw.read(*args)
     end
+
+    # remove alpha channel (because PDF export doesn't support PNGs with alpha channel,
+    # see https://github.com/peclik/clipboard_image_paste/issues/24)
+    def remove_alpha(imgData)
+      begin
+        ilist = Magick::ImageList.new
+        ilist.from_blob(imgData)
+        ilist.each do |img|
+          # border function will compose alpha channel with border color
+          img.border!(0, 0, "white")
+          # deactivating alpha channel ('alpha -off') will skip it during image saving
+          img.alpha(Magick::DeactivateAlphaChannel)
+        end
+        return ilist.to_blob
+      rescue
+        return imgData
+      end
+    end if Object.const_defined?(:Magick)
+
+    # without RMagick we cannot remove alpha channel
+    def remove_alpha(imgData)
+      return imgData
+    end if not Object.const_defined?(:Magick)
   end
 
 end
