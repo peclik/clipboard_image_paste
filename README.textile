@@ -82,7 +82,7 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
-NOT YET RELEASED 1.8
+22.10.2013 RELEASED 1.8
 [-] Attached images are visible in exported PDF files (requires RMagick gem)
 [+] Added support for KbArticle plug-in
 
