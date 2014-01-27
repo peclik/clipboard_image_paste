@@ -130,6 +130,7 @@ begin
   unless KbArticle.included_modules.include? AttachmentPatch
     KbArticle.send(:include, AttachmentPatch)
   end
-rescue NameError
+rescue NameError => e
   # plug-in not installed
+  raise if e.name != nil
 end
