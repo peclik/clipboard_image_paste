@@ -82,6 +82,27 @@
   };
 
   //----------------------------------------------------------------------------
+  // Get browser version if the browser is Internet Explorer. Otherwise the result is -1.
+  function getInternetExplorerVersion() {
+    var rv = -1;
+    if (navigator.appName == 'Microsoft Internet Explorer')
+    {
+      var ua = navigator.userAgent;
+      var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+      if (re.exec(ua) != null)
+        rv = parseFloat( RegExp.$1 );
+    }
+    else if (navigator.appName == 'Netscape')
+    {
+      var ua = navigator.userAgent;
+      var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+      if (re.exec(ua) != null)
+        rv = parseFloat( RegExp.$1 );
+    }
+    return rv;
+  }
+
+  //----------------------------------------------------------------------------
   // Check supported browser version.
   // We support Firefox & Chrome only. Even if other browsers use the same
   // layout engine (Gecko or WebKit) thay may not support Ctrl+V properly.
@@ -102,6 +123,9 @@
       if (isCompatChrome ||
           (M[1] == 'firefox' && browserMajor >= cbImagePaste.cbp_min_firefox_ver))
         return true;
+    }
+    if (getInternetExplorerVersion() >= cbImagePaste.cbp_min_ie_ver) {
+      return true;
     }
     return false;
   };

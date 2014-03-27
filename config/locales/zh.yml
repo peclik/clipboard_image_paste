@@ -9,7 +9,7 @@ zh:
   cbp_txt_no_image_cb    : '剪贴板里的内容不是图像格式，请重试'
   cbp_txt_no_image_pst   : '没有粘贴图像内容'
   cbp_txt_too_many_files : '无法添加图片，已达到最大的附件数量：%{max_attachments}'
-  cbp_txt_wrong_browser  : '不支持当前的浏览器，請使用%{min_firefox_ver}以上版本的Firefox或%{min_chrome_ver}以上版本的Chrome'
+  cbp_txt_wrong_browser  : '您的浏览器不支持剪贴板的API。请使用Mozilla Firefox浏览器版本%{min_firefox_ver}或以上，谷歌Chrome浏览器版本%{min_chrome_ver}或以上，Internet Explorer版本%{min_ie_ver}或以上。'
   cbp_txt_btn_ok         : '确定'
   cbp_txt_btn_cancel     : '取消'
   cbp_txt_copy_link      : '复制图片及其缩略图的链接'

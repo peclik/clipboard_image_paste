@@ -16,3 +16,6 @@ min_chrome_ver_hf : 13
 # minimum Mozilla Firefox version
 min_firefox_ver : 5
 
+# minimum Internet Explorer version
+min_ie_ver : 11
+

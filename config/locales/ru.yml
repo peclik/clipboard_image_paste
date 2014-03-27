@@ -9,7 +9,7 @@ ru:
   cbp_txt_no_image_cb    : 'В буфере обмена не найдено изображений. Попробуйте нажать клавишу PrintScreen ещё раз.'
   cbp_txt_no_image_pst   : 'Пока не вставлено ни одного изображения.'
   cbp_txt_too_many_files : 'Не удается добавить файл. Количество одновременно добавляемых файлов ограничено до %{max_attachments}.'
-  cbp_txt_wrong_browser  : 'Ваш браузер не может вставлять изображения. Используйте Mozilla Firefox версий >= %{min_firefox_ver} или Google Chrome версии >= %{min_chrome_ver}.'
+  cbp_txt_wrong_browser  : 'Ваш браузер не может вставлять изображения. Используйте Mozilla Firefox версий >= %{min_firefox_ver}, Google Chrome версии >= %{min_chrome_ver} или Internet Explorer версии >= %{min_ie_ver}.'
   cbp_txt_btn_ok         : 'ОК'
   cbp_txt_btn_cancel     : 'Отмена'
   cbp_txt_copy_link      : 'Ссылка на изображение и превью'
