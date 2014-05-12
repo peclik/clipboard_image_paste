@@ -12,10 +12,15 @@
   </span>
   <%= hidden_field_tag 'attachments[nnnnn][data]', '', :id => 'cbp_image_data' %>
   <%= text_field_tag 'attachments[nnnnn][name]', '', :id => nil, :class => 'name', :maxlength => 50 %>
-  <%= link_to(image_tag('link.png'), '#', :title => (l(:cbp_txt_copy_link)), :id => 'cbp_link_btn') %>
+  <!--<%= link_to(image_tag('link.png'), '#', :title => (l(:cbp_txt_copy_link)), :id => 'cbp_link_btn') %>-->
+  <%= link_to(image_tag('document.png'), '#', :title => (l(:cbp_txt_copy_full_wiki_link)), :id => 'cbp_full_wiki_link_btn') %>
+  <%= link_to(image_tag('copy.png'), '#', :title => (l(:cbp_txt_copy_thumbnail_wiki_link)), :id => 'cbp_thumbnail_wiki_link_btn') %>
   <%= text_field_tag 'attachments[nnnnn][description]', '', :id => nil, :class => 'description', :maxlength => 255, :placeholder => l(:label_optional_description) %>
   <%= link_to_function(image_tag('delete.png'), 'cbImagePaste.removeImageField(this)', :title => (l(:button_delete))) %>
 </span>
+
+<!-- clip complete tip -->
+<div class="flash notice" id="cbp_txt_copy_complete_tip" style="position: absolute; z-index: 1000; display: none; padding-right: 12px;"><%= l(:cbp_txt_copy_complete_tip) %></div>
 
 <!-- clipboard paste dialog -->
 <div id="cbp_paste_dlg" title="<%= l(:cbp_txt_add_image) %>" style="display:none">

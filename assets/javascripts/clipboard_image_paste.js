@@ -485,16 +485,55 @@
     elements = s.children("input.description");
     elements.attr("name", attachInpId + "[description]").val("");
 
-    // add onclick handler for copy link button
-    elements = s.children("#cbp_link_btn");
-    elements.each(function() {
-      $(this).click(function(el) {
-        showCopyLink($(this), $(this).prev());
-        return false;
-      });
-    });
+    // Huan: disable following button.
+    //// add onclick handler for copy link button
+    //elements = s.children("#cbp_link_btn");
+    //elements.each(function() {
+    //  $(this).click(function(el) {
+    //    showCopyLink($(this), $(this).prev());
+    //    return false;
+    //  });
+    //});
 
     fields.append(s);
+
+    // Huan:
+    // add onclick handler for copy wiki link button
+    var clipboardSWF = '/plugin_assets/clipboard_image_paste/javascripts/jquery.clipboard.swf';
+    var showSuccessTip = function(target) {
+        var $tip = $("#cbp_txt_copy_complete_tip");
+        var targetOffset = $(target).offset();
+        $tip.stop(true, true);
+        $tip.detach().appendTo(target);
+        $tip.offset({
+            left: targetOffset.left - 30
+        });
+        $tip.fadeIn("slow").delay(1000).fadeOut("slow");
+    };
+    elements = s.children("#cbp_full_wiki_link_btn");
+    elements.click(function(e) {
+        showSuccessTip(this);
+        e.preventDefault();
+    });
+    elements.clipboard({
+        path: clipboardSWF,
+        copy: function() {
+            var value = $("input[name='" + attachInpId + "[name]']").val();
+            return "!" + value + "!";
+        }
+    });
+    elements = s.children("#cbp_thumbnail_wiki_link_btn");
+    elements.click(function(e) {
+        showSuccessTip(this);
+        e.preventDefault();
+    });
+    elements.clipboard({
+        path: clipboardSWF,
+        copy: function() {
+            var value = $("input[name='" + attachInpId + "[name]']").val();
+            return "{{thumbnail(" + value + ")}}";
+        }
+    });
 
     $(dialog).dialog("close");
   };
