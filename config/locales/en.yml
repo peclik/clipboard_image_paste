@@ -13,3 +13,8 @@ en:
   cbp_txt_btn_ok         : 'Ok'
   cbp_txt_btn_cancel     : 'Cancel'
   cbp_txt_copy_link      : 'Copy image and thumbnail link'
+
+  # Huan: for convient copy.
+  cbp_txt_copy_full_wiki_link      : 'Copy full size image wiki text to clipboard.'
+  cbp_txt_copy_thumbnail_wiki_link : 'Copy thumbnail image wiki text to clipboard.'
+  cbp_txt_copy_complete_tip        : 'Copied to clipboard!'

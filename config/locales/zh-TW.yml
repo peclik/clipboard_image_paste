@@ -13,3 +13,9 @@ zh-TW:
   cbp_txt_btn_ok         : '確定'
   cbp_txt_btn_cancel     : '取消'
   cbp_txt_copy_link      : '複製圖片和縮略圖鏈接'
+
+
+  # Huan: for convient copy.
+  cbp_txt_copy_full_wiki_link      : '複製 wiki 文本至剪貼簿，可用於展示全尺寸的附件圖片'
+  cbp_txt_copy_thumbnail_wiki_link : '複製 wiki 文本至剪貼簿，可用於展示附件圖片的縮略檔‘
+  cbp_txt_copy_complete_tip        : '成功複製到剪貼簿'
