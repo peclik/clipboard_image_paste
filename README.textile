@@ -29,9 +29,9 @@ h2. Installation:
 
 h2. Compatibility:
 
-* Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
+* Redmine 2.5.x, 2.4.x, 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
 * *works only in Google Chrome and Mozilla Firefox browsers*
-* tested on Chrome 24, 15, 13 and Firefox 18, 16, 5
+* tested on Chrome 38, 24, 15, 13 and Firefox 31, 24, 18, 16, 5
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
 * incompatible plug-ins (not working together with clipboard_image_paste):
@@ -67,14 +67,16 @@ h2. Known issues:
 
 * attached image will be visibile in exported PDFs only if RMagick is installed
   (this is a limit of PDF export in Redmine - alpha channel must be removed from
-  png image)
-* thumbnails using @{{thumbnail}}@ macro will not be shown in exported PDFs 
+  png image; this has been fixed in Redmine 2.6)
+* thumbnails using @{{thumbnail}}@ macro will not be shown in exported PDFs
   (another Redmine's PDF export limit - see http://www.redmine.org/issues/13051)
 * maximum attachment size is checked against BASE64 encoded image data (even
   smaller images than the maximum allowed attachment size can be rejected)
 * clipboard_image_paste's 'Add picture from clipboard' command combines number
   of both regular files and pasted images for maximum number of attachment check,
   while Redmine's original 'Add another file' counts only regular files
+* ability to copy&paste images from clipboard depends on browsers capabilities
+  - some browsers don't support all image formats in the clipboard
 * see Compatibility section for incompatible plug-ins
 
 --------------------------------------------------------------------------------
@@ -82,6 +84,10 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+24.10.2014 NOT YET RELEASED 1.9a
+[!] Redmine 2.6 compatible
+[!] Jcrop upgraded to 0.9.12
+
 22.10.2013 RELEASED 1.8
 [-] Attached images are visible in exported PDF files (requires RMagick gem)
 [+] Added support for KbArticle plug-in
