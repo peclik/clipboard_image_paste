@@ -9,7 +9,7 @@ tr:
   cbp_txt_no_image_cb    : 'Panoda resim bulunamadı, lütfen PrintScreen ile ekran görüntüsünü alınız'
   cbp_txt_no_image_pst   : 'Henüz resim eklenmedi, lütfen önce resim ekleyiniz.'
   cbp_txt_too_many_files : 'Başka resim eklenemiyor. Bir güncellemede izin verilen en yüksek ekleme sayısı : %{max_attachments}.'
-  cbp_txt_wrong_browser  : 'Kullandığınız tarayıcı resim yapıştırmaya izin vermiyor. Lütfen Firefox %{min_firefox_ver} yada Chrome %{min_chrome_ver} ve üstü kullanınız.'
+  cbp_txt_wrong_browser  : 'Tarayıcınız panoya API desteklemiyor. Mozilla Firefox sürüm %{min_firefox_ver} veya daha fazla, Google Chrome sürüm %{min_chrome_ver} veya daha fazla, Internet Explorer sürüm %{min_ie_ver} veya daha fazla kullanın.'
   cbp_txt_btn_ok         : 'Tamam'
   cbp_txt_btn_cancel     : 'İptal'
   cbp_txt_copy_link      : 'Resim ve küçük resmin adreslerini kopyala'

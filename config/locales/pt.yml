@@ -9,7 +9,7 @@ pt:
   cbp_txt_no_image_cb    : 'Nenhuma imagem encontrada na área de transferência. Tente carregar na tecla "Prt Scn" novamente.'
   cbp_txt_no_image_pst   : 'Nenhuma imagem foi colada ainda. Insira alguns primeiro.'
   cbp_txt_too_many_files : 'O seu navegador actual não pode colar fotos. Por favor, use o Mozilla Firefox %{max_attachments}.'
-  cbp_txt_wrong_browser  : 'O seu navegador actual não pode colar fotos. Por favor, use o Mozilla Firefox ver. >= %{min_firefox_ver} or Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_wrong_browser  : 'O seu navegador actual não pode colar fotos. Por favor, use o Mozilla Firefox ver. >= %{min_firefox_ver}, Google Chrome ver. >= %{min_chrome_ver} or Internet Explorer ver. >= %{min_ie_ver}.'
   cbp_txt_btn_ok         : 'Ok'
   cbp_txt_btn_cancel     : 'Cancelar'
   cbp_txt_copy_link      : 'Copiar imagem e link miniatura'

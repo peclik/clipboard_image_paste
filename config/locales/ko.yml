@@ -9,7 +9,7 @@ ko:
   cbp_txt_no_image_cb    : '클립보드내용이 이미지가 아닙니다. PrintScreen  키로 캡춰하세요.'
   cbp_txt_no_image_pst   : '이미지가 없습니다.'
   cbp_txt_too_many_files : '등록실패. 최대 %{max_attachments}개의 이미지를 등록할 수 있습니다.'
-  cbp_txt_wrong_browser  : '사용할 수 없는 브라우져입니다.(IE 는 지원하지 않습니다.) Firefox %{min_firefox_ver} 버전 이상 또는 구글크롬 %{min_chrome_ver} 이상 지원합니다.'
+  cbp_txt_wrong_browser  : '브라우저가 클립 보드 API를 지원하지 않습니다. 모질라 파이어 폭스 버전 %{min_firefox_ver} 이상, 구글 크롬 버전 %{min_chrome_ver} 이상, Internet Explorer 버전 %{min_ie_ver} 이상을 사용하십시오.'
   cbp_txt_btn_ok         : '확인'
   cbp_txt_btn_cancel     : '취소'
   cbp_txt_copy_link      : '이미지 링크와 썸네일 링크'

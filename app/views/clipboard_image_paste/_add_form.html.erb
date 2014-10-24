@@ -30,7 +30,7 @@
       cbImagePaste.cbp_txt_no_image_cb     = "<%= escape_javascript(l(:cbp_txt_no_image_cb      )).html_safe %>";
       cbImagePaste.cbp_txt_no_image_pst    = "<%= escape_javascript(l(:cbp_txt_no_image_pst     )).html_safe %>";
       cbImagePaste.cbp_txt_too_many_files  = "<%= escape_javascript(l(:cbp_txt_too_many_files,  :max_attachments => $clipboard_image_paste_config['max_attachments']   )).html_safe %>";
-      cbImagePaste.cbp_txt_wrong_browser   = "<%= escape_javascript(l(:cbp_txt_wrong_browser,   :min_firefox_ver => $clipboard_image_paste_config['min_firefox_ver'], :min_chrome_ver => $clipboard_image_paste_config['min_chrome_ver_hf'])).html_safe %>";
+      cbImagePaste.cbp_txt_wrong_browser   = "<%= escape_javascript(l(:cbp_txt_wrong_browser,   :min_firefox_ver => $clipboard_image_paste_config['min_firefox_ver'], :min_chrome_ver => $clipboard_image_paste_config['min_chrome_ver_hf'], :min_ie_ver => $clipboard_image_paste_config['min_ie_ver'])).html_safe %>";
       cbImagePaste.cbp_txt_btn_ok          = "<%= escape_javascript(l(:cbp_txt_btn_ok           )).html_safe %>";
       cbImagePaste.cbp_txt_btn_cancel      = "<%= escape_javascript(l(:cbp_txt_btn_cancel       )).html_safe %>";
       cbImagePaste.cbp_txt_too_big_image   = "<%= escape_javascript(l(:error_attachment_too_big, :max_size => number_to_human_size(Setting.attachment_max_size.to_i.kilobytes))).html_safe %>";
@@ -38,6 +38,7 @@
       cbImagePaste.cbp_max_attachments     = <%= $clipboard_image_paste_config['max_attachments'] %>;
       cbImagePaste.cbp_min_chrome_ver      = <%= $clipboard_image_paste_config['min_chrome_ver'] %>;
       cbImagePaste.cbp_min_firefox_ver     = <%= $clipboard_image_paste_config['min_firefox_ver'] %>;
+      cbImagePaste.cbp_min_ie_ver          = <%= $clipboard_image_paste_config['min_ie_ver'] %>;
       cbImagePaste.cbp_act_update_id       = <%= "%03d" % (Time.now.usec / 1000) %>;
     }(window.cbImagePaste = window.cbImagePaste || {}, j$cbp));
   </script>

@@ -9,7 +9,7 @@ it:
   cbp_txt_no_image_cb    : 'Nessuna immagine trovata nella clipboard. Prova a premere nuovamente PrintScreen.'
   cbp_txt_no_image_pst   : 'Nessuna immagine è stata ancora incollata. Inseriscine prima qualcuna.'
   cbp_txt_too_many_files : 'Impossibile aggiungere altri allegati. Il numero massimo di allegati ammesso è %{max_attachments}.'
-  cbp_txt_wrong_browser  : 'Il tuo browser non è in grado di incollare immagini. Per cortesia usa Mozilla Firefox ver. >= %{min_firefox_ver} oppure Google Chrome ver. >= %{min_chrome_ver}.'
+  cbp_txt_wrong_browser  : 'Il tuo browser non è in grado di incollare immagini. Per cortesia usa Mozilla Firefox ver. >= %{min_firefox_ver}, Google Chrome ver. >= %{min_chrome_ver} oppure Internet Explorer ver. >= %{min_ie_ver}.'
   cbp_txt_btn_ok         : 'Ok'
   cbp_txt_btn_cancel     : 'Annulla'
   cbp_txt_copy_link      : 'Copia immagine e collegamento a miniatura'

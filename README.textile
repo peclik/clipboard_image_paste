@@ -7,7 +7,7 @@ Paste (cropped) image from clipboard as an attachment.
 * uses *pure client side JavaScript*
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
-* works *only in Google Chrome and Mozilla Firefox browsers*
+* works *only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
 * translations: Bulgarian, Czech, English, French, German, Italian, Japanese, Korean, Polish, Portuguese (+ Brazil), Russian, Simplified Chinese, Spanish, Taiwanese Mandarin, Turkish
 
 * homepage: https://github.com/peclik/clipboard_image_paste
@@ -30,7 +30,7 @@ h2. Installation:
 h2. Compatibility:
 
 * Redmine 2.5.x, 2.4.x, 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
-* *works only in Google Chrome and Mozilla Firefox browsers*
+* *works only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
 * tested on Chrome 38, 24, 15, 13 and Firefox 31, 24, 18, 16, 5
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
@@ -61,6 +61,7 @@ h2. Authors:
 * R-i-c-k-y (Italian translation) [https://github.com/R-i-c-k-y]
 * battlej (Korean translation) [https://github.com/battlej]
 * Miguel Borges (Portuguese translation) [https://github.com/mapb1990]
+* ilya-tcykunov (IE 11 compatibility) [https://github.com/ilya-tcykunov]
 
 --------------------------------------------------------------------------------
 
@@ -87,6 +88,7 @@ h2. Changelog:
 <pre>
 24.10.2014 NOT YET RELEASED 1.9a
 [!] Redmine 2.6 compatible
+[!] Internet Explorer 11 compatible
 [!] Jcrop upgraded to 0.9.12
 [+] Added Portuguese translation
 
