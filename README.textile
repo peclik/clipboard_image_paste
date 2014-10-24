@@ -60,6 +60,7 @@ h2. Authors:
 * Patricia Sz. (Polish translation) [https://github.com/papisz]
 * R-i-c-k-y (Italian translation) [https://github.com/R-i-c-k-y]
 * battlej (Korean translation) [https://github.com/battlej]
+* Miguel Borges (Portuguese translation) [https://github.com/mapb1990]
 
 --------------------------------------------------------------------------------
 
