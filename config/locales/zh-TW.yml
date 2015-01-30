@@ -1,6 +1,6 @@
 # Taiwanese-Mandarin strings go here
 zh-TW:
-  cbp_txt_add_image      : '新增剪貼簿的截圖 (暫不支援IE瀏覽器)'
+  cbp_txt_add_image      : '新增剪貼簿的截圖'
   cbp_txt_crop_box       : '拖曳範圍: x={1} y={2} width={3} height={4}'
   cbp_txt_print          : '使用PrintScreen鍵，然後按Ctrl+ V.'
   cbp_txt_select         : '使用滑鼠框選圖片的特定部分.'
