@@ -132,5 +132,4 @@ begin
   end
 rescue NameError => e
   # plug-in not installed
-  raise if e.name != nil
 end

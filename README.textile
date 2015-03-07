@@ -29,9 +29,9 @@ h2. Installation:
 
 h2. Compatibility:
 
-* Redmine 2.6.x, 2.5.x, 2.4.x, 2.3.x, 2.2.x, 2.1.x, 2.0.x, 1.4.x
+* Redmine 3.0.x, 2.x, 1.4.x
 * *works only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
-* tested on Chrome 38, 24, 15, 13 and Firefox 31, 24, 18, 16, 5
+* tested on Chrome 40, 24, 15, 13 and Firefox 35, 24, 18, 16, 5
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
 * incompatible plug-ins (not working together with clipboard_image_paste):
@@ -62,6 +62,8 @@ h2. Authors:
 * battlej (Korean translation) [https://github.com/battlej]
 * Miguel Borges (Portuguese translation) [https://github.com/mapb1990]
 * ilya-tcykunov (IE 11 compatibility) [https://github.com/ilya-tcykunov]
+* Ben305 (JCrop patch for Redmine 3.0) [https://github.com/Ben305]
+* mouson (Taiwanese Mandarin translation update) [https://github.com/mouson]
 
 --------------------------------------------------------------------------------
 
@@ -86,6 +88,11 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+07.03.2015 RELEASED 1.10
+[!] Redmine 3.0 compatible
+[-] JCrop patch for compatibility with jQuery used in Redmine 3.0
+[*] Taiwanese Mandarin translation updated
+
 24.10.2014 RELEASED 1.9
 [!] Redmine 2.6 compatible
 [!] Internet Explorer 11 compatible
