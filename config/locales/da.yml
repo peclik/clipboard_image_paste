@@ -1,0 +1,15 @@
+# Danish strings go here
+da:
+  cbp_txt_add_image      : 'Tilføj billede fra udklipsholderen'
+  cbp_txt_crop_box       : 'beskær:  x={1}  y={2}  bredde={3}  højde={4}'
+  cbp_txt_print          : 'Brug PrintScreen-tasten for at tage skærmprint og sæt ind her med CTRL+V.'
+  cbp_txt_select         : 'Brug musen til at markere billedudsnit.'
+  cbp_txt_deselect       : 'Klik uden for markeringen for at fjerne den.'
+  cbp_txt_empty_cb       : 'Udklipsholderen er tom. Prøv PrintScreen-tasten.'
+  cbp_txt_no_image_cb    : 'Intet billede fundet i udklipsholderen. Prøv PrintScreen-tasten.'
+  cbp_txt_no_image_pst   : 'Indsæt først nogle billeder.'
+  cbp_txt_too_many_files : 'Kan ikke tilføje flere filer. Antallet af filvedhæftninger pr. opdatering er begrænset til %{max_attachments}.'
+  cbp_txt_wrong_browser  : 'Denne browser kan ikke indsætte billeder. Anvend Mozilla Firefox ver. >= %{min_firefox_ver}, Google Chrome ver. >= %{min_chrome_ver} or Internet Explorer ver. >= %{min_ie_ver}.'
+  cbp_txt_btn_ok         : 'Ok'
+  cbp_txt_btn_cancel     : 'Annullér'
+  cbp_txt_copy_link      : 'Kopier billed-link'
