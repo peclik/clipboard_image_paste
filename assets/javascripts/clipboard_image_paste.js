@@ -425,6 +425,7 @@
   // Creates a new image from a given source
   function createImage(source) {
     pastedImage = new Image();
+    pastedImage.crossOrigin = "Anonymous";
     pastedImage.onload = function() {
       createPanel();
     }
