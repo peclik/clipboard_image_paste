@@ -23,6 +23,7 @@ h2. Installation:
 ** git: @git clone https://github.com/peclik/clipboard_image_paste.git
  plugins/clipboard_image_paste@
 * place plugin files into @plugins/clipboard_image_paste@ folder (strip possible @-master@ or @-version@ suffix)
+* restart Redmine instance
 * Redmine 2.5 and older: it's recommended to install RMagick gem, otherwise attached images will not show in exported PDF files
 
 --------------------------------------------------------------------------------
@@ -89,6 +90,9 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+
+[-] Corrected improper use of the tag <p>
+
 28.06.2017 RELEASED 1.11
 [+] Don't remove alpha channel from PNG image for Redmine >=2.6
 [+] Added Danish translation
