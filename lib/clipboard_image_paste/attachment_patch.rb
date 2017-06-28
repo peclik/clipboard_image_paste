@@ -84,12 +84,12 @@ module AttachmentPatch
       rescue
         return imgData
       end
-    end if Object.const_defined?(:Magick)
+    end if $clipboard_image_paste_remove_alpha && Object.const_defined?(:Magick)
 
     # without RMagick we cannot remove alpha channel
     def remove_alpha(imgData)
       return imgData
-    end if not Object.const_defined?(:Magick)
+    end if not ($clipboard_image_paste_remove_alpha && Object.const_defined?(:Magick))
   end
 
 end
