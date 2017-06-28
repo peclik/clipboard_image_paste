@@ -575,12 +575,19 @@
       return;
 
     // move image attachment block to proper place
+    var addFile;
     var attachFields = $("#attachments_fields");
-    if (!attachFields)
-      return;
 
-    var addFile = attachFields.next("span.add_attachment");
-    if (!addFile)
+    if (attachFields && attachFields.length > 0) {
+      // Redmine <= 3.3
+      addFile = attachFields.next("span.add_attachment");
+    }
+    else {
+      // Redmine >= 3.4
+      addFile = $(".attachments_form");
+    }
+
+    if (!addFile || addFile.length == 0)
       return;
 
     addFile.after(imageForm);
