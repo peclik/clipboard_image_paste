@@ -34,8 +34,6 @@ h2. Compatibility:
 * *works only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
-* incompatible plug-ins (not working together with clipboard_image_paste):
-** LaTeX MathJax [https://github.com/process91/redmine_latex_mathjax]
 
 --------------------------------------------------------------------------------
 
