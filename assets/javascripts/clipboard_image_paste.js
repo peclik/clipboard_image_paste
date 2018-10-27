@@ -118,7 +118,7 @@
       M[1] = M[1].toLowerCase();
 
       var isCompatChrome = (M[1] == 'webkit' && typeof window.chrome === "object" && browserMajor >= cbImagePaste.cbp_min_chrome_ver);
-      hasClipboard = isCompatChrome;
+      hasClipboard = isCompatChrome || (M[1] == 'firefox' && browserMajor >= 50);
 
       if (isCompatChrome ||
           (M[1] == 'firefox' && browserMajor >= cbImagePaste.cbp_min_firefox_ver))
@@ -327,14 +327,14 @@
   //
   //****************************************************************************
 
-  // firefox contenteditable element
+  // Firefox<50 contenteditable element
   var pasteCatcher;
 
   function initPasteListener() {
     // We start by checking if the browser supports the
     // Clipboard object. If not, we need to create a
     // contenteditable element that catches all pasted data
-    if (!window.Clipboard) {
+    if (!hasClipboard) {
       pasteCatcher = document.createElement("div");
 
       // Firefox allows images to be pasted into contenteditable elements
@@ -362,7 +362,7 @@
     }
   };
 
-  // Handle click events for paste catcher (Firefox)
+  // Handle click events for paste catcher (Firefox<50)
   function focusCatcher(e) {
     if (pasteCatcher)
       pasteCatcher.focus();
@@ -370,7 +370,7 @@
 
   // Handle paste events
   function pasteHandler(e) {
-    // We need to check if event.clipboardData is supported (Chrome)
+    // We need to check if event.clipboardData is supported (Chrome and Firefox>=50)
     if (hasClipboard && e.clipboardData) {
       // Get the items from the clipboard
       var items = e.clipboardData.items;
@@ -394,7 +394,7 @@
         }
         alert(cbImagePaste.cbp_txt_no_image_cb);
       }
-    // If we can't handle clipboard data directly (Firefox),
+    // If we can't handle clipboard data directly (Firefox<50),
     // we need to read what was pasted from the contenteditable element
     } else {
       // This is a cheap trick to make sure we read the data
