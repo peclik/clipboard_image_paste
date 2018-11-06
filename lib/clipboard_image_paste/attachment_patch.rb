@@ -68,6 +68,10 @@ module AttachmentPatch
       @raw.read(*args)
     end
 
+    def eof?
+      @raw.eof?
+    end
+
     # remove alpha channel (because PDF export doesn't support PNGs with alpha channel,
     # see https://github.com/peclik/clipboard_image_paste/issues/24)
     def remove_alpha(imgData)
