@@ -39,7 +39,7 @@
       cbImagePaste.cbp_min_chrome_ver      = <%= $clipboard_image_paste_config['min_chrome_ver'] %>;
       cbImagePaste.cbp_min_firefox_ver     = <%= $clipboard_image_paste_config['min_firefox_ver'] %>;
       cbImagePaste.cbp_min_ie_ver          = <%= $clipboard_image_paste_config['min_ie_ver'] %>;
-      cbImagePaste.cbp_act_update_id       = <%= "%03d" % (Time.now.usec / 1000) %>;
+      cbImagePaste.cbp_act_update_id       = "<%= "%03d" % (Time.now.usec / 1000) %>";
     }(window.cbImagePaste = window.cbImagePaste || {}, j$cbp));
   </script>
 
