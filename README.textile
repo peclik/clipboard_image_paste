@@ -7,7 +7,7 @@ Paste (cropped) image from clipboard as an attachment.
 * uses *pure client side JavaScript*
 * attachment *works for issues, wiki, news, files, documents, forums*
 * image can be interactively *cropped*
-* works *only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
+* tested *only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (11+)*
 * translations: Bulgarian, Czech, English, French, German, Italian, Japanese, Korean, Polish, Portuguese (+ Brazil), Russian, Simplified Chinese, Spanish, Taiwanese Mandarin, Turkish
 
 * homepage: https://github.com/peclik/clipboard_image_paste
@@ -18,20 +18,20 @@ Paste (cropped) image from clipboard as an attachment.
 h2. Installation:
 
 * download one of:
-** latest release zip: https://github.com/peclik/clipboard_image_paste/archive/v1.12.zip
+** latest release zip: https://github.com/peclik/clipboard_image_paste/archive/v1.13.zip
 ** development zip: https://github.com/peclik/clipboard_image_paste/archive/master.zip
 ** git: @git clone https://github.com/peclik/clipboard_image_paste.git
  plugins/clipboard_image_paste@
 * place plugin files into @plugins/clipboard_image_paste@ folder (strip possible @-master@ or @-version@ suffix)
 * restart Redmine instance
-* Redmine 2.5 and older: it's recommended to install RMagick gem, otherwise attached images will not show in exported PDF files
+* it's recommended to install RMagick gem, otherwise attached images will not show in exported PDF files
 
 --------------------------------------------------------------------------------
 
 h2. Compatibility:
 
 * Redmine up to 3.4.x, 2.x, 1.4.x
-* *works only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (>=11)*
+* *tested only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (11+)*
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
 
@@ -63,22 +63,27 @@ h2. Authors:
 * Ben305 (JCrop patch for Redmine 3.0) [https://github.com/Ben305]
 * mouson (Taiwanese Mandarin translation update) [https://github.com/mouson]
 * AThomsen (Danish translation) [https://github.com/AThomsen]
+* Iku Iwasa (Firefox 63 compatibility fix) [https://github.com/iquiw]
+* Tomohisa Kusukawa (redmine_s3 plugin compatiblity fix) [https://github.com/tkusukawa]
+* Kirill Smirnov (pictrue-id generation fix) [https://github.com/KirillSmirnov]
 
 --------------------------------------------------------------------------------
 
 h2. Known issues:
 
 * thumbnails using @{{thumbnail}}@ macro will not be shown in exported PDFs
-  (another Redmine's PDF export limit - see http://www.redmine.org/issues/13051)
+  (Redmine's PDF export limit - see http://www.redmine.org/issues/13051,
+  https://www.redmine.org/issues/15296)
 * maximum attachment size is checked against BASE64 encoded image data (even
   smaller images than the maximum allowed attachment size can be rejected)
 * clipboard_image_paste's 'Add picture from clipboard' command combines number
-  of both regular files and pasted images for maximum number of attachment check,
+  of both regular files and pasted images for maximum number of attachments check,
   while Redmine's original 'Add another file' counts only regular files
 * ability to copy&paste images from clipboard depends on browsers capabilities
   - some browsers don't support all image formats in the clipboard
-* Redmine 2.5 and older: attached image will be visibile in exported PDFs only 
-  if RMagick is installed (this is a limit of PDF export in Redmine - alpha channel 
+  (but PrintScreen + Paste usually works)
+* Redmine 2.5 and older: attached image will be visibile in exported PDFs only
+  if RMagick is installed (this is a limit of PDF export in Redmine - alpha channel
   must be removed from png image)
 * see Compatibility section for incompatible plug-ins
 
@@ -87,12 +92,16 @@ h2. Known issues:
 h2. Changelog:
 
 <pre>
+08.11.2018 RELEASED 1.13
+[!] compatibility with Firefox 63+ using HTTPS connection
+[-] compatibility with redmine_s3 plugin
+
 28.06.2017 RELEASED 1.12
 [!] Redmine 3.4 compatible
 [-] Corrected improper use of the tag <p>
 
 28.06.2017 RELEASED 1.11
-[+] Don't remove alpha channel from PNG image for Redmine >=2.6
+[+] Don't remove alpha channel from PNG image for Redmine 2.6+
 [+] Added Danish translation
 
 07.03.2015 RELEASED 1.10
