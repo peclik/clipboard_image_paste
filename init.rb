@@ -28,7 +28,12 @@ Redmine::Plugin.register :clipboard_image_paste do
 end
 
 
-if Rails::VERSION::MAJOR >= 3
+if Rails::VERSION::MAJOR >= 5 and Rails::VERSION::MINOR >= 1
+  ActiveSupport::Reloader.to_prepare do
+    require_dependency 'clipboard_image_paste/hooks'
+    require_dependency 'clipboard_image_paste/attachment_patch'
+  end
+elsif Rails::VERSION::MAJOR >= 3
   ActionDispatch::Callbacks.to_prepare do
     require_dependency 'clipboard_image_paste/hooks'
     require_dependency 'clipboard_image_paste/attachment_patch'
