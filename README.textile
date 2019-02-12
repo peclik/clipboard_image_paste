@@ -153,4 +153,4 @@ Legend:
 [!] Important info
 </pre>
 
-<kbd>![alt text](https://compteur-visites.ennder.fr/sites/31/token/github_cip/image "Logo") <!-- .element height="10%" width="10%" --></kbd>
+<kbd>![alt text](https://compteur-visites.ennder.fr/sites/31/token/githubcip/image "Logo") <!-- .element height="10%" width="10%" --></kbd>
