@@ -152,5 +152,3 @@ Legend:
 [-] Bug fixed (we hope)
 [!] Important info
 </pre>
-
-!{width: 10%; height: 10%}https://compteur-visites.ennder.fr/sites/31/token/githubcip/image!
