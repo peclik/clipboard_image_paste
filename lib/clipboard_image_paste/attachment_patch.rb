@@ -22,7 +22,9 @@ module AttachmentPatch
       unloadable
 
       #~ alias_method_chain :attach_files, :pasted_images
-      alias_method_chain :save_attachments, :pasted_images
+      #~ alias_method_chain :save_attachments, :pasted_images
+      alias_method :save_attachments_without_pasted_images, :save_attachments
+      alias_method :save_attachments, :save_attachments_with_pasted_images
     end
   end
 
