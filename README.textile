@@ -31,6 +31,7 @@ h2. Installation:
 h2. Compatibility:
 
 * Redmine up to 3.4.x, 2.x, 1.4.x
+* works only with textile, markdown is open (issue #60)[https://github.com/peclik/clipboard_image_paste/issues/60]
 * *tested only in Google Chrome, Mozilla Firefox and the last versions of Internet Explorer (11+)*
 * plug-ins taking advantage of clipboard_image_paste:
 ** KbArticle [https://github.com/alexbevi/redmine_knowledgebase]
