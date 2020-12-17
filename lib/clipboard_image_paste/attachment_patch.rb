@@ -13,34 +13,17 @@
 #*******************************************************************************
 
 module AttachmentPatch
-  def self.included(base)
-    base.send(:include, InstanceMethods)
-
-    # Same as typing in the class
-    base.class_eval do
-      # Send unloadable so it will not be unloaded in development
-      unloadable
-
-      #~ alias_method_chain :attach_files, :pasted_images
-      alias_method_chain :save_attachments, :pasted_images
-    end
-  end
-
-  module InstanceMethods
-
-    # go through attachments and find keys starting by 100;
-    # image attachments are identified by key >= 10001, the keys should be numbers
-    # 'cause acts_as_attachable is sorting them according to insertion order
-    def save_attachments_with_pasted_images(attachments, author=User.current)
-      if attachments && attachments.is_a?(Hash)
-        attachments.each do |key,value|
-          next unless key.start_with?('1000')
-          value['file'] = PastedImage.new(value.delete('data'), value.delete('name'))
-        end
+  # go through attachments and find keys starting by 100;
+  # image attachments are identified by key >= 10001, the keys should be numbers
+  # 'cause acts_as_attachable is sorting them according to insertion order
+  def save_attachments(attachments, author=User.current)
+    if attachments && attachments.is_a?(ActionController::Parameters)
+      attachments.each do |key,value|
+        next unless key.start_with?('1000')
+        value['file'] = PastedImage.new(value.delete('data'), value.delete('name'))
       end
-      save_attachments_without_pasted_images(attachments, author)
     end
-
+    super(attachments, author)
   end
 
   # Mimics uploaded file field data.
@@ -102,37 +85,37 @@ end
 # (like in tests) and registering multiple callbacks
 
 unless Issue.included_modules.include? AttachmentPatch
-  Issue.send(:include, AttachmentPatch)
+  Issue.send(:prepend, AttachmentPatch)
 end
 
 unless News.included_modules.include? AttachmentPatch
-  News.send(:include, AttachmentPatch)
+  News.send(:prepend, AttachmentPatch)
 end
 
 unless WikiPage.included_modules.include? AttachmentPatch
-  WikiPage.send(:include, AttachmentPatch)
+  WikiPage.send(:prepend, AttachmentPatch)
 end
 
 unless Message.included_modules.include? AttachmentPatch
-  Message.send(:include, AttachmentPatch)
+  Message.send(:prepend, AttachmentPatch)
 end
 
 unless Document.included_modules.include? AttachmentPatch
-  Document.send(:include, AttachmentPatch)
+  Document.send(:prepend, AttachmentPatch)
 end
 
 unless Version.included_modules.include? AttachmentPatch
-  Version.send(:include, AttachmentPatch)
+  Version.send(:prepend, AttachmentPatch)
 end
 
 unless Project.included_modules.include? AttachmentPatch
-  Project.send(:include, AttachmentPatch)
+  Project.send(:prepend, AttachmentPatch)
 end
 
 # KbArticle plug-in (https://github.com/alexbevi/redmine_knowledgebase)
 begin
   unless KbArticle.included_modules.include? AttachmentPatch
-    KbArticle.send(:include, AttachmentPatch)
+    KbArticle.send(:prepend, AttachmentPatch)
   end
 rescue NameError => e
   # plug-in not installed

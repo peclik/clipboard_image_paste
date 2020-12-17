@@ -29,7 +29,7 @@ end
 
 
 if Rails::VERSION::MAJOR >= 3
-  ActionDispatch::Callbacks.to_prepare do
+  Rails.configuration.to_prepare do
     require_dependency 'clipboard_image_paste/hooks'
     require_dependency 'clipboard_image_paste/attachment_patch'
   end
