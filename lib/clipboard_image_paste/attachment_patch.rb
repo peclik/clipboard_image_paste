@@ -27,16 +27,13 @@ module AttachmentPatch
   end
 
   # Mimics uploaded file field data.
-  class PastedImage
+  class PastedImage < StringIO
+
     def initialize(data, name)
-      @raw = StringIO.new(remove_alpha(Base64.decode64(data.to_s)))
+      super(remove_alpha(Base64.decode64(data.to_s)))
       @name = name.to_s.strip
       @name = 'picture.png' if @name.blank?
       @name += '.png' unless @name.end_with?('.png')
-    end
-
-    def size
-      @raw.size
     end
 
     def original_filename
@@ -47,14 +44,7 @@ module AttachmentPatch
       "image/png"
     end
 
-    def read(*args)
-      @raw.read(*args)
-    end
-
-    def eof?
-      @raw.eof?
-    end
-
+    protected
     # remove alpha channel (because PDF export doesn't support PNGs with alpha channel,
     # see https://github.com/peclik/clipboard_image_paste/issues/24)
     def remove_alpha(imgData)
@@ -78,7 +68,6 @@ module AttachmentPatch
       return imgData
     end if not ($clipboard_image_paste_remove_alpha && Object.const_defined?(:Magick))
   end
-
 end
 
 # Send patches - guarded against including the module multiple time
