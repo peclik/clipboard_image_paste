@@ -29,8 +29,9 @@ end
 
 
 if Rails::VERSION::MAJOR >= 3
-  Rails.configuration.to_prepare do
-    require_dependency 'clipboard_image_paste/hooks'
+  dispatcher = Rails.version < '5.1' ? ActionDispatch::Callbacks : ActiveSupport::Reloader
+  dispatcher.to_prepare do
+    # require_dependency 'clipboard_image_paste/hooks'
     require_dependency 'clipboard_image_paste/attachment_patch'
   end
 else

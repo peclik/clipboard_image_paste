@@ -12,7 +12,7 @@
 # - GNU GENERAL PUBLIC LICENSE Version 2
 #*******************************************************************************
 
-module AttachmentPatch
+module ClipboardImagePaste::AttachmentPatch
   # go through attachments and find keys starting by 100;
   # image attachments are identified by key >= 10001, the keys should be numbers
   # 'cause acts_as_attachable is sorting them according to insertion order
@@ -84,38 +84,38 @@ end
 # Send patches - guarded against including the module multiple time
 # (like in tests) and registering multiple callbacks
 
-unless Issue.included_modules.include? AttachmentPatch
-  Issue.send(:prepend, AttachmentPatch)
+unless Issue.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  Issue.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless News.included_modules.include? AttachmentPatch
-  News.send(:prepend, AttachmentPatch)
+unless News.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  News.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless WikiPage.included_modules.include? AttachmentPatch
-  WikiPage.send(:prepend, AttachmentPatch)
+unless WikiPage.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  WikiPage.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless Message.included_modules.include? AttachmentPatch
-  Message.send(:prepend, AttachmentPatch)
+unless Message.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  Message.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless Document.included_modules.include? AttachmentPatch
-  Document.send(:prepend, AttachmentPatch)
+unless Document.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  Document.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless Version.included_modules.include? AttachmentPatch
-  Version.send(:prepend, AttachmentPatch)
+unless Version.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  Version.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
-unless Project.included_modules.include? AttachmentPatch
-  Project.send(:prepend, AttachmentPatch)
+unless Project.included_modules.include? ClipboardImagePaste::AttachmentPatch
+  Project.send(:prepend, ClipboardImagePaste::AttachmentPatch)
 end
 
 # KbArticle plug-in (https://github.com/alexbevi/redmine_knowledgebase)
 begin
-  unless KbArticle.included_modules.include? AttachmentPatch
-    KbArticle.send(:prepend, AttachmentPatch)
+  unless KbArticle.included_modules.include? ClipboardImagePaste::AttachmentPatch
+    KbArticle.send(:prepend, ClipboardImagePaste::AttachmentPatch)
   end
 rescue NameError => e
   # plug-in not installed
